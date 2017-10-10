@@ -90,6 +90,16 @@
                 app:showLabel="true"
                 app:iconResource="@drawable/ic_action_goods"></odoo.controls.OField>
 
+            <odoo.controls.OField
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fieldLabelColor="@color/theme_secondary"
+                app:fieldName="category_id"
+                app:fieldTextAppearance="?android:textAppearanceMedium"
+                app:showLabel="true"
+                app:iconResource="@drawable/ic_action_goods"></odoo.controls.OField>
+
             <View
                 style="@style/ViewSeparator"
                 android:layout_marginLeft="72dp" />
@@ -199,6 +209,16 @@
                     android:layout_height="wrap_content"
                     app:fieldLabelColor="@color/theme_secondary"
                     app:fieldName="product_id"
+                    app:fieldTextAppearance="?android:textAppearanceMedium"
+                    app:showLabel="true"
+                    app:iconResource="@drawable/ic_action_goods"></odoo.controls.OField>
+
+                <odoo.controls.OField
+                    android:id="@+id/category_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:fieldLabelColor="@color/theme_secondary"
+                    app:fieldName="category_id"
                     app:fieldTextAppearance="?android:textAppearanceMedium"
                     app:showLabel="true"
                     app:iconResource="@drawable/ic_action_goods"></odoo.controls.OField>

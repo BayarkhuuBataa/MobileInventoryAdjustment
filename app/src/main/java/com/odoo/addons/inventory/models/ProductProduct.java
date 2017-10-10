@@ -18,9 +18,11 @@ public class ProductProduct extends OModel {
     OColumn name = new OColumn("Name", OVarchar.class);
     OColumn default_code = new OColumn("Default code", OVarchar.class).setSize(100);
     OColumn barcode = new OColumn("Barcode", OVarchar.class).setSize(100);
+    OColumn categ_id = new OColumn("Internal Category", ProductCategory.class, OColumn.RelationType.ManyToOne);
 
     public ProductProduct(Context context, OUser user) {
         super(context, "product.product", user);
         setDefaultNameColumn("name");
     }
+
 }
