@@ -13,12 +13,14 @@ import com.odoo.core.support.OUser;
 
 public class ProductProduct extends OModel {
 
-//    public static final String TAG = ProductProduct.class.getSimpleName();
+    public static final String TAG = ProductProduct.class.getSimpleName();
 
+    OColumn name = new OColumn("Name", OVarchar.class);
     OColumn default_code = new OColumn("Default code", OVarchar.class).setSize(100);
     OColumn barcode = new OColumn("Barcode", OVarchar.class).setSize(100);
 
     public ProductProduct(Context context, OUser user) {
         super(context, "product.product", user);
+        setDefaultNameColumn("name");
     }
 }
