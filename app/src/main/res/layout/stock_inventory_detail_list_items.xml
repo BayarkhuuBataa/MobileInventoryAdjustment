@@ -100,6 +100,41 @@
                 app:showLabel="true"
                 app:iconResource="@drawable/ic_action_goods"></odoo.controls.OField>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/default_16dp"
+                android:paddingRight="@dimen/default_16dp"
+                android:id="@+id/layoutAddItem"
+                android:paddingBottom="@dimen/default_8dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_action_edit"
+                    android:padding="2dp"
+                    android:tint="@color/android_orange_dark"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Захиалгын мөр"
+                    android:textAllCaps="true"
+                    android:textColor="@color/android_orange_dark"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <odoo.controls.ExpandableListControl
+                android:id="@+id/inventory_detail_lines"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/default_8dp"
+                android:layout_marginBottom="@dimen/default_8dp"
+                android:layout_height="wrap_content">
+            </odoo.controls.ExpandableListControl>
+
             <View
                 style="@style/ViewSeparator"
                 android:layout_marginLeft="72dp" />

@@ -33,7 +33,7 @@ public class StockInventory extends OModel {
     OColumn company_id = new OColumn("Company", ResCompany.class, OColumn.RelationType.ManyToOne).setRequired();
     OColumn product_id = new OColumn("Inventoried Product", ProductProduct.class, OColumn.RelationType.ManyToOne);
     OColumn category_id = new OColumn("Inventoried Category", ProductCategory.class, OColumn.RelationType.ManyToOne);
-//    OColumn line_ids = new OColumn("Inventory line", StockInventoryLine.class, OColumn.RelationType.OneToMany).setRelatedColumn("inventory_id");
+    OColumn line_ids = new OColumn("Inventory line", StockInventoryLine.class, OColumn.RelationType.OneToMany).setRelatedColumn("inventory_id");
 
     public StockInventory(Context context, OUser user) {
         super(context, "stock.inventory", user);
