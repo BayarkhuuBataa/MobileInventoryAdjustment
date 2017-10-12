@@ -262,10 +262,10 @@ public class AdjustmentDetails extends OdooCompatActivity
         protected Void doInBackground(ODomain... params) {
             if (app.inNetwork()) {
                 ODomain domain = params[0];
+                domain.add("&");
                 domain.add("|");
                 domain.add("state","=","draft");
                 domain.add("state","=","confirm");
-                domain.add("&");
                 domain.add("filter","!=","none");
                 List<ODataRow> rows = stockInventory.select(null, "id = ?", new String[]{"0"});
                 for (ODataRow row : rows) {
