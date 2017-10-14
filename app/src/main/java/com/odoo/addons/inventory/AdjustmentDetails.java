@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.TabLayout;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
@@ -13,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.odoo.App;
@@ -26,7 +28,6 @@ import com.odoo.core.orm.OValues;
 import com.odoo.core.orm.fields.OColumn;
 import com.odoo.core.rpc.helper.ODomain;
 import com.odoo.core.support.OdooCompatActivity;
-import com.odoo.core.utils.IntentUtils;
 import com.odoo.core.utils.OAlert;
 import com.odoo.core.utils.OControls;
 import com.odoo.core.utils.OResource;
@@ -50,6 +51,7 @@ public class AdjustmentDetails extends OdooCompatActivity
         OField.IOnFieldValueChangeListener {
 
     public static final String TAG = Adjustments.class.getSimpleName();
+    private static final int REQUEST_ADD_ITEMS = 0;
 
     private Bundle extras;
     private StockInventory stockInventory;
@@ -69,6 +71,8 @@ public class AdjustmentDetails extends OdooCompatActivity
     private ExpandableListControl mList;
     private List<Object> objects = new ArrayList<Object>();
     private ExpandableListControl.ExpandableListAdapter mAdapter;
+    private TabLayout tabLayout;
+    private LinearLayout layoutAddItem;
 
 
     @Override
@@ -77,6 +81,11 @@ public class AdjustmentDetails extends OdooCompatActivity
         setContentView(R.layout.stock_inventory_detail);
 
         mContext = getApplicationContext();
+
+        tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        tabLayout.addTab(tabLayout.newTab().setText("Inventory Details"));
+        layoutAddItem = (LinearLayout) findViewById(R.id.layoutAddItem);
+        layoutAddItem.setOnClickListener(this);
 
         collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.stock_inventory_collapsing_toolbar);
 
@@ -115,17 +124,14 @@ public class AdjustmentDetails extends OdooCompatActivity
         if (record != null) {
             color = OStringColorUtil.getStringColor(this, record.getString("name"));
         }
+        mForm = (OForm) findViewById(R.id.stockInventoryForm);
         if (edit) {
             if (!hasRecordInExtra()) {
                 collapsingToolbarLayout.setTitle("New");
             }
-            mForm = (OForm) findViewById(R.id.stockInventoryFormEdit);
-            findViewById(R.id.stock_inventory_view_layout).setVisibility(View.GONE);
-            findViewById(R.id.stock_inventory_edit_layout).setVisibility(View.VISIBLE);
+            mForm.setEditable(true);
         } else {
-            mForm = (OForm) findViewById(R.id.stockInventoryForm);
-            findViewById(R.id.stock_inventory_edit_layout).setVisibility(View.GONE);
-            findViewById(R.id.stock_inventory_view_layout).setVisibility(View.VISIBLE);
+            mForm.setEditable(false);
         }
         setColor(color);
     }
@@ -150,25 +156,25 @@ public class AdjustmentDetails extends OdooCompatActivity
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.full_address:
-                IntentUtils.redirectToMap(this, record.getString("full_address"));
-                break;
-            case R.id.website:
-                IntentUtils.openURLInBrowser(this, record.getString("website"));
-                break;
-            case R.id.email:
-                IntentUtils.requestMessage(this, record.getString("email"));
-                break;
-            case R.id.phone_number:
-                IntentUtils.requestCall(this, record.getString("phone"));
-                break;
-            case R.id.mobile_number:
-                IntentUtils.requestCall(this, record.getString("mobile"));
-                break;
-            case R.id.captureImage:
-                fileManager.requestForFile(OFileManager.RequestType.IMAGE_OR_CAPTURE_IMAGE);
+            case R.id.layoutAddItem:
+                loadActivity();
+                finish();
                 break;
         }
+    }
+
+    private void loadActivity() {
+        Intent intent = new Intent(this, AddProductLineWizard.class);
+        Bundle extra = new Bundle();
+//        for (String key : recordLine.keySet()) {
+//            extra.putFloat(key, recordLine.get(key));
+//        }
+        intent.putExtras(extra);
+        startActivityForResult(intent, REQUEST_ADD_ITEMS);
+
+//        Intent intent = new Intent(this, AddProductLineWizard.class);
+//        startActivity(intent);
+
     }
 
     private void checkControls() {
@@ -320,8 +326,10 @@ public class AdjustmentDetails extends OdooCompatActivity
                         public View getView(int position, View mView, ViewGroup parent) {
                             ODataRow row = (ODataRow) mAdapter.getItem(position);
                             Log.d(TAG, "row : " + row);
-                            OControls.setText(mView, R.id.edit_product, row.getString("product_id"));
-                            OControls.setText(mView, R.id.edit_location, row.getString("location_id"));
+                            ODataRow prod = row.getM2ORecord("product_id").browse();
+                            ODataRow loc = row.getM2ORecord("location_id").browse();
+                            OControls.setText(mView, R.id.edit_product, prod.getString("name"));
+                            OControls.setText(mView, R.id.edit_location, loc.getString("name"));
                             OControls.setText(mView, R.id.edit_check_qty, String.format("%.2f", row.getFloat("theoretical_qty")));
                             OControls.setText(mView, R.id.edit_real_qty, String.format("%.2f", row.getFloat("product_qty")));
                             return mView;
