@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.odoo.App;
@@ -28,6 +29,7 @@ import com.odoo.core.utils.OAlert;
 import com.odoo.core.utils.OResource;
 import com.odoo.core.utils.OStringColorUtil;
 
+import java.util.HashMap;
 import java.util.List;
 
 import odoo.controls.ExpandableListControl;
@@ -60,7 +62,9 @@ public class AdjustmentDetails extends OdooCompatActivity
     private ExpandableListControl mList;
     private Context mContext;
     private OnStockInventoryChangeUpdate onSIChangeUpdate;
-
+    private LinearLayout layoutAddItem;
+    private HashMap<String, Float> lineValues = new HashMap<String, Float>();
+    private HashMap<String, Integer> lineIds = new HashMap<String, Integer>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -118,6 +122,8 @@ public class AdjustmentDetails extends OdooCompatActivity
     }
 
     private void setupToolbar() {
+        layoutAddItem = (LinearLayout) findViewById(R.id.layoutAddItem);
+        layoutAddItem.setOnClickListener(this);
         mForm = (OForm) findViewById(R.id.stockInventoryForm);
         if (!hasRecordInExtra()) {
             setMode(mEditMode);
@@ -134,14 +140,23 @@ public class AdjustmentDetails extends OdooCompatActivity
             mForm.initForm(record);
             collapsingToolbarLayout.setTitle(record.getString("name"));
 
-//            drawLine();
         }
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-
+            case R.id.layoutAddItem:
+                if (mForm.getValues() != null) {
+                    Intent intent = new Intent(this, AddProductLineWizard.class);
+                    Bundle extra = new Bundle();
+                    for (String key : lineValues.keySet()) {
+                        extra.putFloat(key, lineValues.get(key));
+                    }
+                    intent.putExtras(extra);
+                    startActivityForResult(intent, REQUEST_ADD_ITEMS);
+                }
+                break;
         }
     }
 
