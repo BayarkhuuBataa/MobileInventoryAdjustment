@@ -214,6 +214,8 @@ public class AdjustmentDetails extends OdooCompatActivity
                     values.put("line_ids", ids);
                     if (record != null) {
                         stockInventory.update(record.getInt(OColumn.ROW_ID), values);
+//                        recordLine.clear();
+//                        recordLine = stockInventoryLine.select(null, "inventory_id = ?", new String[]{String.valueOf(OColumn.ROW_ID)});
                         onSIChangeUpdate.execute(domain);
                         Toast.makeText(this, R.string.toast_information_saved, Toast.LENGTH_LONG).show();
                         mEditMode = !mEditMode;
@@ -227,9 +229,8 @@ public class AdjustmentDetails extends OdooCompatActivity
                             stockInventoryLine.update(row.getInt("_id"), oValues);
                         }
 
-//                        recordLine.clear();
+                        recordLine.clear();
                         recordLine = stockInventoryLine.select(null, "inventory_id = ?", new String[]{String.valueOf(row_id)});
-
                         onSIChangeUpdate.execute(domain);
                         if (row_id != OModel.INVALID_ROW_ID) {
                             Toast.makeText(this, R.string.stock_inventory_created, Toast.LENGTH_LONG).show();
@@ -237,6 +238,7 @@ public class AdjustmentDetails extends OdooCompatActivity
                         }
                     }
                 }
+                Log.d(" FINISSH ___ ", String.valueOf(recordLine));
                 break;
             case R.id.menu_stock_inventory_cancel:
             case R.id.menu_stock_inventory_edit:
@@ -378,15 +380,14 @@ public class AdjustmentDetails extends OdooCompatActivity
                     List<ODataRow> prodUom = productUom.select();
 
                     OValues values = new OValues();
-                    values.put("inventory_id", inventoryId);
-//  product id -g olj tavih dutuu !!!
-                    values.put("product_id", 1);
+                    values.put("inventory_id", String.valueOf(inventoryId));
+                    values.put("product_id", String.valueOf(product_row_id));
 //  product uom id -g olj tavih dutuu !!!
-                    values.put("location_id", 1);
-                    values.put("theoretical_qty", 0);
-                    values.put("product_qty", qty);
+                    values.put("location_id", String.valueOf(1));
+                    values.put("theoretical_qty", String.valueOf(0));
+                    values.put("product_qty", String.valueOf(qty));
 //  product uom id -g olj tavih dutuu !!!
-                    values.put("product_uom_id", 1);
+                    values.put("product_uom_id", String.valueOf(1));
                     items.add(values.toDataRow());
 
                     if (recordLine.size() > 0) {
