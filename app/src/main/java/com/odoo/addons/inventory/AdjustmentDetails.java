@@ -1,7 +1,6 @@
 package com.odoo.addons.inventory;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -214,15 +213,13 @@ public class AdjustmentDetails extends OdooCompatActivity
                     values.put("line_ids", ids);
                     if (record != null) {
                         stockInventory.update(record.getInt(OColumn.ROW_ID), values);
-//                        recordLine.clear();
-//                        recordLine = stockInventoryLine.select(null, "inventory_id = ?", new String[]{String.valueOf(OColumn.ROW_ID)});
                         onSIChangeUpdate.execute(domain);
                         Toast.makeText(this, R.string.toast_information_saved, Toast.LENGTH_LONG).show();
                         mEditMode = !mEditMode;
                         setupToolbar();
                     } else {
 
-                        int row_id = stockInventory.insert(values);
+                        final int row_id = stockInventory.insert(values);
                         for (ODataRow row : recordLine) {
                             OValues oValues = new OValues();
                             oValues.put("inventory_id", row_id);
@@ -288,10 +285,12 @@ public class AdjustmentDetails extends OdooCompatActivity
                     stockInventory.quickCreateRecord(r);
                 }
                 stockInventory.quickSyncRecords(domain);
-                for (ODataRow row : recordLine) {
-                    stockInventoryLine.quickCreateRecord(row);
+                if (!recordLine.equals("null")) {
+                    for (ODataRow row : recordLine) {
+                        stockInventoryLine.quickCreateRecord(row);
+                    }
+                    stockInventoryLine.quickSyncRecords(domain);
                 }
-                stockInventoryLine.quickSyncRecords(domain);
             }
             return null;
         }
@@ -328,13 +327,58 @@ public class AdjustmentDetails extends OdooCompatActivity
         if (requestCode == REQUEST_ADD_ITEMS && resultCode == Activity.RESULT_OK) {
             lineValues.clear();
             for (String key : data.getExtras().keySet()) {
-                if (data.getExtras().getFloat(key) > 0)
-                    lineValues.put(key, data.getExtras().getFloat(key));
+//                if (data.getExtras().getFloat(key) > 0)
+                lineValues.put(key, data.getExtras().getFloat(key));
             }
-            OnProductChange onProductChange = new OnProductChange();
-            onProductChange.execute(lineValues);
+            onProductChange(lineValues);
+//            OnProductChange onProductChange = new OnProductChange();
+//            onProductChange.execute(lineValues);
 
         }
+    }
+
+    private void onProductChange(HashMap<String, Float>... params) {
+        int inventoryId = extras.getInt(OColumn.ROW_ID);
+        for (String key : params[0].keySet()) {
+            Float qty = params[0].get(key);
+            int product_row_id = productProduct.selectRowId(Integer.parseInt(key));
+            List<ODataRow> prodUom = productUom.select();
+
+            OValues values = new OValues();
+            values.put("inventory_id", String.valueOf(inventoryId));
+            values.put("product_id", String.valueOf(product_row_id));
+//  product uom id -g olj tavih dutuu !!!
+            values.put("location_id", String.valueOf(1));
+            values.put("theoretical_qty", String.valueOf(0));
+            values.put("product_qty", String.valueOf(qty));
+//  product uom id -g olj tavih dutuu !!!
+            values.put("product_uom_id", String.valueOf(1));
+//                    items.add(values.toDataRow());
+
+            if (recordLine.size() > 0) {
+                String updateRowId = new String();
+                for (ODataRow rec : recordLine) {
+                    int product_id = productProduct.selectServerId(rec.getInt("product_id"));
+                    if (product_id == Integer.parseInt(key)) {
+                        updateRowId = String.valueOf(rec.getString("_id"));
+                    }
+                }
+
+                if (updateRowId.equals("")) {
+                    stockInventoryLine.insert(values);
+                } else {
+                    stockInventoryLine.update(Integer.parseInt(updateRowId), values);
+                }
+            } else {
+                stockInventoryLine.insert(values);
+            }
+        }
+        if (!hasRecordInExtra()) {
+            recordLine = stockInventoryLine.select(null, "inventory_id = ?", new String[]{"0"});
+        } else {
+            recordLine = record.getO2MRecord("line_ids").browseEach();
+        }
+        drawLines(recordLine);
     }
 
     private void drawLines(List<ODataRow> rows) {
@@ -358,72 +402,72 @@ public class AdjustmentDetails extends OdooCompatActivity
         mAdapter.notifyDataSetChanged(objects);
     }
 
-    private class OnProductChange extends AsyncTask<HashMap<String, Float>, Void, List<ODataRow>> {
-        private ProgressDialog progressDialog;
-        private String warning = null;
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-        }
-
-        @Override
-        protected List<ODataRow> doInBackground(HashMap<String, Float>... params) {
-
-            List<ODataRow> items = new ArrayList<>();
-            int inventoryId = extras.getInt(OColumn.ROW_ID);
-            try {
-                for (String key : params[0].keySet()) {
-                    Float qty = params[0].get(key);
-
-                    int product_row_id = productProduct.selectRowId(Integer.parseInt(key));
-                    List<ODataRow> prodUom = productUom.select();
-
-                    OValues values = new OValues();
-                    values.put("inventory_id", String.valueOf(inventoryId));
-                    values.put("product_id", String.valueOf(product_row_id));
-//  product uom id -g olj tavih dutuu !!!
-                    values.put("location_id", String.valueOf(1));
-                    values.put("theoretical_qty", String.valueOf(0));
-                    values.put("product_qty", String.valueOf(qty));
-//  product uom id -g olj tavih dutuu !!!
-                    values.put("product_uom_id", String.valueOf(1));
-                    items.add(values.toDataRow());
-
-                    if (recordLine.size() > 0) {
-                        String updateRowId = new String();
-                        for (ODataRow rec : recordLine) {
-                            int product_id = productProduct.selectServerId(rec.getInt("product_id"));
-                            if (product_id == Integer.parseInt(key)) {
-                                updateRowId = String.valueOf(rec.getString("_id"));
-                            }
-                        }
-
-                        if (updateRowId.equals("")) {
-                            stockInventoryLine.insert(values);
-                        } else {
-                            stockInventoryLine.update(Integer.parseInt(updateRowId), values);
-                        }
-                    } else {
-                        stockInventoryLine.insert(values);
-                    }
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            return items;
-        }
-
-        @Override
-        protected void onPostExecute(List<ODataRow> row) {
-            super.onPostExecute(row);
-            if (!hasRecordInExtra()) {
-                recordLine = stockInventoryLine.select(null, "inventory_id = ?", new String[]{"0"});
-            } else {
-                recordLine = record.getO2MRecord("line_ids").browseEach();
-            }
-            drawLines(recordLine);
-        }
-    }
+//    private class OnProductChange extends AsyncTask<HashMap<String, Float>, Void, List<ODataRow>> {
+//        private ProgressDialog progressDialog;
+//        private String warning = null;
+//
+//        @Override
+//        protected void onPreExecute() {
+//            super.onPreExecute();
+//        }
+//
+//        @Override
+//        protected List<ODataRow> doInBackground(HashMap<String, Float>... params) {
+//
+//            List<ODataRow> items = new ArrayList<>();
+//            int inventoryId = extras.getInt(OColumn.ROW_ID);
+//            try {
+//                for (String key : params[0].keySet()) {
+//                    Float qty = params[0].get(key);
+//
+//                    int product_row_id = productProduct.selectRowId(Integer.parseInt(key));
+//                    List<ODataRow> prodUom = productUom.select();
+//
+//                    OValues values = new OValues();
+//                    values.put("inventory_id", String.valueOf(inventoryId));
+//                    values.put("product_id", String.valueOf(product_row_id));
+////  product uom id -g olj tavih dutuu !!!
+//                    values.put("location_id", String.valueOf(1));
+//                    values.put("theoretical_qty", String.valueOf(0));
+//                    values.put("product_qty", String.valueOf(qty));
+////  product uom id -g olj tavih dutuu !!!
+//                    values.put("product_uom_id", String.valueOf(1));
+//                    items.add(values.toDataRow());
+//
+//                    if (recordLine.size() > 0) {
+//                        String updateRowId = new String();
+//                        for (ODataRow rec : recordLine) {
+//                            int product_id = productProduct.selectServerId(rec.getInt("product_id"));
+//                            if (product_id == Integer.parseInt(key)) {
+//                                updateRowId = String.valueOf(rec.getString("_id"));
+//                            }
+//                        }
+//
+//                        if (updateRowId.equals("")) {
+//                            stockInventoryLine.insert(values);
+//                        } else {
+//                            stockInventoryLine.update(Integer.parseInt(updateRowId), values);
+//                        }
+//                    } else {
+//                        stockInventoryLine.insert(values);
+//                    }
+//                }
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//            return items;
+//        }
+//
+//        @Override
+//        protected void onPostExecute(List<ODataRow> row) {
+//            super.onPostExecute(row);
+//            if (!hasRecordInExtra()) {
+//                recordLine = stockInventoryLine.select(null, "inventory_id = ?", new String[]{"0"});
+//            } else {
+//                recordLine = record.getO2MRecord("line_ids").browseEach();
+//            }
+//            drawLines(recordLine);
+//        }
+//    }
 
 }
