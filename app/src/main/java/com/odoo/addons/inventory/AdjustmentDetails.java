@@ -21,6 +21,7 @@ import com.odoo.App;
 import com.odoo.R;
 import com.odoo.addons.customers.utils.ShareUtil;
 import com.odoo.addons.inventory.models.ProductProduct;
+import com.odoo.addons.inventory.models.ProductUom;
 import com.odoo.addons.inventory.models.StockInventory;
 import com.odoo.addons.inventory.models.StockInventoryLine;
 import com.odoo.core.orm.ODataRow;
@@ -65,6 +66,7 @@ public class AdjustmentDetails extends OdooCompatActivity
     private StockInventory stockInventory;
     private StockInventoryLine stockInventoryLine;
     private ProductProduct productProduct;
+    private ProductUom productUom;
     private ExpandableListControl mList;
     private Context mContext;
     private OnStockInventoryChangeUpdate onSIChangeUpdate;
@@ -100,6 +102,7 @@ public class AdjustmentDetails extends OdooCompatActivity
         stockInventory = new StockInventory(this, null);
         stockInventoryLine = new StockInventoryLine(this, null);
         productProduct = new ProductProduct(this, null);
+        productUom = new ProductUom(this, null);
 
         extras = getIntent().getExtras();
         if (!hasRecordInExtra())
@@ -206,7 +209,6 @@ public class AdjustmentDetails extends OdooCompatActivity
                 if (values != null) {
                     List ids = new ArrayList();
                     for (ODataRow row : recordLine) {
-                        OValues oValues = new OValues();
                         ids.add(row.getInt("_id"));
                     }
                     values.put("line_ids", ids);
@@ -217,7 +219,17 @@ public class AdjustmentDetails extends OdooCompatActivity
                         mEditMode = !mEditMode;
                         setupToolbar();
                     } else {
-                        final int row_id = stockInventory.insert(values);
+
+                        int row_id = stockInventory.insert(values);
+                        for (ODataRow row : recordLine) {
+                            OValues oValues = new OValues();
+                            oValues.put("inventory_id", row_id);
+                            stockInventoryLine.update(row.getInt("_id"), oValues);
+                        }
+
+//                        recordLine.clear();
+                        recordLine = stockInventoryLine.select(null, "inventory_id = ?", new String[]{String.valueOf(row_id)});
+
                         onSIChangeUpdate.execute(domain);
                         if (row_id != OModel.INVALID_ROW_ID) {
                             Toast.makeText(this, R.string.stock_inventory_created, Toast.LENGTH_LONG).show();
@@ -270,10 +282,14 @@ public class AdjustmentDetails extends OdooCompatActivity
         protected Void doInBackground(ODomain... params) {
             if (app.inNetwork()) {
                 ODomain domain = params[0];
+                for (ODataRow r: stockInventory.select(null, "id = ?", new String[]{"0"})) {
+                    stockInventory.quickCreateRecord(r);
+                }
+                stockInventory.quickSyncRecords(domain);
                 for (ODataRow row : recordLine) {
                     stockInventoryLine.quickCreateRecord(row);
                 }
-                stockInventory.quickSyncRecords(domain);
+                stockInventoryLine.quickSyncRecords(domain);
             }
             return null;
         }
@@ -354,19 +370,20 @@ public class AdjustmentDetails extends OdooCompatActivity
 
             List<ODataRow> items = new ArrayList<>();
             int inventoryId = extras.getInt(OColumn.ROW_ID);
-
             try {
                 for (String key : params[0].keySet()) {
                     Float qty = params[0].get(key);
 
                     int product_row_id = productProduct.selectRowId(Integer.parseInt(key));
+                    List<ODataRow> prodUom = productUom.select();
 
                     OValues values = new OValues();
                     values.put("inventory_id", inventoryId);
-                    values.put("product_id", product_row_id);
+//  product id -g olj tavih dutuu !!!
+                    values.put("product_id", 1);
 //  product uom id -g olj tavih dutuu !!!
                     values.put("location_id", 1);
-                    values.put("theoretical_qty", 0.0);
+                    values.put("theoretical_qty", 0);
                     values.put("product_qty", qty);
 //  product uom id -g olj tavih dutuu !!!
                     values.put("product_uom_id", 1);
@@ -399,8 +416,11 @@ public class AdjustmentDetails extends OdooCompatActivity
         @Override
         protected void onPostExecute(List<ODataRow> row) {
             super.onPostExecute(row);
-//            recordLine = stockInventory.select(null, "inventory_id = ?", new String[]{extras.getString(OColumn.ROW_ID)});
-            recordLine = record.getO2MRecord("line_ids").browseEach();
+            if (!hasRecordInExtra()) {
+                recordLine = stockInventoryLine.select(null, "inventory_id = ?", new String[]{"0"});
+            } else {
+                recordLine = record.getO2MRecord("line_ids").browseEach();
+            }
             drawLines(recordLine);
         }
     }
