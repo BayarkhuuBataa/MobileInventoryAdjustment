@@ -132,7 +132,11 @@ public class AdjustmentDetails extends OdooCompatActivity
                 collapsingToolbarLayout.setTitle("New");
             }
             mForm.setEditable(true);
+            layoutAddItem.setEnabled(true);
+            findViewById(R.id.layoutAddItem).setVisibility(View.VISIBLE);
         } else {
+            findViewById(R.id.layoutAddItem).setVisibility(View.GONE);
+            layoutAddItem.setEnabled(false);
             mForm.setEditable(false);
         }
         setColor(color);
