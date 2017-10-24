@@ -242,7 +242,6 @@ public class AdjustmentDetails extends OdooCompatActivity
                         }
                     }
                 }
-                Log.d(" FINISSH ___ ", String.valueOf(recordLine));
                 break;
             case R.id.menu_stock_inventory_cancel:
             case R.id.menu_stock_inventory_edit:
