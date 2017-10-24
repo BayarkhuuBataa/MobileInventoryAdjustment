@@ -23,6 +23,7 @@ import com.odoo.addons.inventory.models.ProductProduct;
 import com.odoo.addons.inventory.models.ProductUom;
 import com.odoo.addons.inventory.models.StockInventory;
 import com.odoo.addons.inventory.models.StockInventoryLine;
+import com.odoo.addons.inventory.models.StockLocation;
 import com.odoo.core.orm.ODataRow;
 import com.odoo.core.orm.OModel;
 import com.odoo.core.orm.OValues;
@@ -74,6 +75,7 @@ public class AdjustmentDetails extends OdooCompatActivity
     private HashMap<String, Integer> lineIds = new HashMap<String, Integer>();
     private ExpandableListControl.ExpandableListAdapter mAdapter;
     private List<Object> objects = new ArrayList<>();
+    private StockLocation stockLocation;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -101,6 +103,7 @@ public class AdjustmentDetails extends OdooCompatActivity
         stockInventory = new StockInventory(this, null);
         stockInventoryLine = new StockInventoryLine(this, null);
         productProduct = new ProductProduct(this, null);
+        stockLocation = new StockLocation(this, null);
         productUom = new ProductUom(this, null);
 
         extras = getIntent().getExtras();
@@ -391,8 +394,12 @@ public class AdjustmentDetails extends OdooCompatActivity
                         ODataRow row = (ODataRow) mAdapter.getItem(position);
                         Log.d(TAG, "row : " + row);
 
-                        OControls.setText(mView, R.id.edit_product, row.getString("product_id"));
-                        OControls.setText(mView, R.id.edit_location, row.getString("location_id"));
+                        List<ODataRow> prod = productProduct.select(null, "_id = ?", new String[]{row.getString("product_id")});
+                        List<ODataRow> loc = stockLocation.select(null, "_id = ?", new String[]{row.getString("location_id")});
+
+                        OControls.setText(mView, R.id.edit_product,
+                                "[" + ((prod.get(0).getString("default_code") == null) ? "" : prod.get(0).getString("default_code")) + "] " + prod.get(0).getString("name"));
+                        OControls.setText(mView, R.id.edit_location, loc.get(0).getString("name"));
                         OControls.setText(mView, R.id.edit_check_qty, String.format("%.2f", row.getFloat("theoretical_qty")));
                         OControls.setText(mView, R.id.edit_real_qty, String.format("%.2f", row.getFloat("product_qty")));
 
