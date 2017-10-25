@@ -1,4 +1,4 @@
-package com.odoo.addons.inventory.models;
+package com.odoo.addons.inventory;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.odoo.R;
+import com.odoo.addons.inventory.models.ProductProduct;
 import com.odoo.core.orm.ODataRow;
 import com.odoo.core.orm.ServerDataHelper;
 import com.odoo.core.orm.fields.OColumn;
@@ -55,6 +56,7 @@ public class AddProductLineWizard extends ActionBarActivity implements
     private OColumn mCol = null;
     private HashMap<String, Float> lineValues = new HashMap<String, Float>();
     private Boolean mLongClicked = false;
+    private ServerDataHelper helper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +75,7 @@ public class AddProductLineWizard extends ActionBarActivity implements
             for (String key : extra.keySet()) {
                 lineValues.put(key, extra.getFloat(key));
             }
-            for (Object local : productProduct.select(null, null, null, "manufacturer DESC")) {
+            for (Object local : productProduct.select(null, null, null, "name DESC")) {
                 ODataRow product = (ODataRow) local;
                 if (lineValues.containsKey(product.getString("id") + "")) {
                     localItems.add(0, product);
@@ -172,7 +174,11 @@ public class AddProductLineWizard extends ActionBarActivity implements
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         ODataRow data = (ODataRow) objects.get(position);
-        int row_id = productProduct.selectRowId(data.getInt("id"));
+        Log.d(" ___ DATA ___ ", String.valueOf(data));
+        Log.d(" ___ DAid ___ ", String.valueOf(data.getFloat("id").intValue()));
+        Log.d(" ___ DAid ___ ", String.valueOf(Math.round(data.getFloat("id"))));
+        int row_id = productProduct.selectRowId(data.getFloat("id").intValue());
+        Log.d(" ___ ROW .___ ", String.valueOf(row_id) +" OColumn.ROW_ID " + OColumn.ROW_ID);
         if (row_id != -1) {
             data.put(OColumn.ROW_ID, row_id);
         }
@@ -188,7 +194,7 @@ public class AddProductLineWizard extends ActionBarActivity implements
     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
         ODataRow data = (ODataRow) objects.get(position);
         mLongClicked = true;
-        int row_id = productProduct.selectRowId(data.getInt("id"));
+        int row_id = productProduct.selectRowId(data.getFloat("id").intValue());
         if (row_id != -1) {
             data.put(OColumn.ROW_ID, row_id);
         }
@@ -270,8 +276,8 @@ public class AddProductLineWizard extends ActionBarActivity implements
             Intent intent = new Intent();
             intent.putExtras(data);
             setResult(RESULT_OK, intent);
+            Log.d(" SET RESULT: ", String.valueOf(intent));
             finish();
-
         } else {
             setResult(RESULT_CANCELED);
             finish();
@@ -291,7 +297,6 @@ public class AddProductLineWizard extends ActionBarActivity implements
         }
     }
 
-
     private class LiveSearch extends AsyncTask<String, Void, List<ODataRow>> {
 
         @Override
@@ -303,8 +308,9 @@ public class AddProductLineWizard extends ActionBarActivity implements
 
         @Override
         protected List<ODataRow> doInBackground(String... params) {
+            Log.d(" ___ Live Search ___ ", String.valueOf(params));
             try {
-                ServerDataHelper helper = productProduct.getServerDataHelper();
+                helper = productProduct.getServerDataHelper();
                 ODomain domain = new ODomain();
                 domain.add(productProduct.getDefaultNameColumn(), "ilike", params[0]);
                 domain.add("id", "not in", productProduct.getServerIds());
