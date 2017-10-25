@@ -308,11 +308,12 @@ public class AddProductLineWizard extends ActionBarActivity implements
 
         @Override
         protected List<ODataRow> doInBackground(String... params) {
-            Log.d(" ___ Live Search ___ ", String.valueOf(params));
             try {
                 helper = productProduct.getServerDataHelper();
                 ODomain domain = new ODomain();
+                domain.add("|");
                 domain.add(productProduct.getDefaultNameColumn(), "ilike", params[0]);
+                domain.add("barcode", "ilike", params[0]);
                 domain.add("id", "not in", productProduct.getServerIds());
                 if (mCol != null) {
                     for (String key : mCol.getDomains().keySet()) {
@@ -320,6 +321,7 @@ public class AddProductLineWizard extends ActionBarActivity implements
                 }
                 OdooFields fields = new OdooFields(productProduct.getColumns());
                 Log.d(TAG, "fields : " + fields);
+                Log.d(TAG, "domain : " + domain);
                 return helper.searchRecords(fields, domain, 10);
                 //return helper.nameSearch(params[0], domain, 10);
             } catch (Exception e) {
