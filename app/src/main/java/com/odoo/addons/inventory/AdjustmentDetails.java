@@ -192,7 +192,6 @@ public class AdjustmentDetails extends OdooCompatActivity
                 int product_id = productProduct.selectServerId(line.getInt("product_id"));
                 if (product_id != 0) {
                     lineValues.put(product_id + "", line.getFloat("product_qty"));
-                    lineIds.put(product_id + "", line.getInt("id"));
                 }
             }
         }
@@ -204,7 +203,6 @@ public class AdjustmentDetails extends OdooCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        onSIChangeUpdate = new OnStockInventoryChangeUpdate();
         ODomain domain = new ODomain();
         switch (item.getItemId()) {
             case android.R.id.home:
@@ -213,34 +211,22 @@ public class AdjustmentDetails extends OdooCompatActivity
             case R.id.menu_stock_inventory_save:
                 OValues values = mForm.getValues();
                 if (values != null) {
-                    List ids = new ArrayList();
-                    for (ODataRow row : recordLine) {
-                        ids.add(row.getInt("_id"));
-                    }
-                    values.put("line_ids", ids);
+                    int stockInventoryId;
                     if (record != null) {
                         stockInventory.update(record.getInt(OColumn.ROW_ID), values);
-                        onSIChangeUpdate.execute(domain);
+                        stockInventoryId = record.getInt(OColumn.ROW_ID);
                         Toast.makeText(this, R.string.toast_information_saved, Toast.LENGTH_LONG).show();
                         mEditMode = !mEditMode;
-                        setupToolbar();
+                        setMode(false);
                     } else {
-
                         final int row_id = stockInventory.insert(values);
-                        for (ODataRow row : recordLine) {
-                            OValues oValues = new OValues();
-                            oValues.put("inventory_id", row_id);
-                            stockInventoryLine.update(row.getInt("_id"), oValues);
-                        }
-
-                        recordLine.clear();
-                        recordLine = stockInventoryLine.select(null, "inventory_id = ?", new String[]{String.valueOf(row_id)});
-                        onSIChangeUpdate.execute(domain);
+                        stockInventoryId = row_id;
                         if (row_id != OModel.INVALID_ROW_ID) {
                             Toast.makeText(this, R.string.stock_inventory_created, Toast.LENGTH_LONG).show();
                             finish();
                         }
                     }
+                    createLocal(stockInventoryId);
                 }
                 break;
             case R.id.menu_stock_inventory_cancel:
@@ -336,53 +322,69 @@ public class AdjustmentDetails extends OdooCompatActivity
 //                if (data.getExtras().getFloat(key) > 0)
                 lineValues.put(key, data.getExtras().getFloat(key));
             }
-            onProductChange(lineValues);
-//            OnProductChange onProductChange = new OnProductChange();
-//            onProductChange.execute(lineValues);
+            propareLineData(lineValues);
 
         }
     }
 
-    private void onProductChange(HashMap<String, Float>... params) {
-        int inventoryId = extras.getInt(OColumn.ROW_ID);
-        for (String key : params[0].keySet()) {
-            Float qty = params[0].get(key);
-            int product_row_id = productProduct.selectRowId(Integer.parseInt(key));
-            List<ODataRow> prodUom = productUom.select();
+    private void createLocal(Integer stockInventoryId) {
+        onSIChangeUpdate = new OnStockInventoryChangeUpdate();
+        List<ODataRow> existData = stockInventoryLine.select(null, "inventory_id = ?", new String[]{String.valueOf(stockInventoryId)});
+        ODomain domain = new ODomain();
 
-            OValues values = new OValues();
-            values.put("inventory_id", String.valueOf(inventoryId));
-            values.put("product_id", String.valueOf(product_row_id));
-//  product uom id -g olj tavih dutuu !!!
-            values.put("location_id", String.valueOf(1));
-            values.put("theoretical_qty", String.valueOf(0));
-            values.put("product_qty", String.valueOf(qty));
-//  product uom id -g olj tavih dutuu !!!
-            values.put("product_uom_id", String.valueOf(1));
-//                    items.add(values.toDataRow());
-
-            if (recordLine.size() > 0) {
-                String updateRowId = new String();
-                for (ODataRow rec : recordLine) {
-                    int product_id = productProduct.selectServerId(rec.getInt("product_id"));
-                    if (product_id == Integer.parseInt(key)) {
-                        updateRowId = String.valueOf(rec.getString("_id"));
+        if (!recordLine.equals(null)) {
+            String updateRowId = new String();
+            if (!existData.equals(null)) {
+                for (ODataRow rec: recordLine) {
+                    for (ODataRow local: existData) {
+                        OValues oValues = new OValues();
+                        oValues.put("inventory_id", stockInventoryId);
+                        rec.addAll(oValues.toDataRow());
+                        if (local.getInt("product_id") == rec.getInt("product_id")) {
+                            updateRowId = String.valueOf(local.getString("_id"));
+                        }
                     }
-                }
+                    if (updateRowId.equals("")) {
+                        stockInventoryLine.insert(rec.toValues());
+                    } else {
+                        stockInventoryLine.update(Integer.parseInt(updateRowId), rec.toValues());
+                    }
 
-                if (updateRowId.equals("")) {
-                    stockInventoryLine.insert(values);
-                } else {
-                    stockInventoryLine.update(Integer.parseInt(updateRowId), values);
                 }
             } else {
-                stockInventoryLine.insert(values);
+                stockInventoryLine.insert((OValues) recordLine);
             }
         }
-        if (!hasRecordInExtra()) {
-            recordLine = stockInventoryLine.select(null, "inventory_id = ?", new String[]{"0"});
-        } else {
-            recordLine = record.getO2MRecord("line_ids").browseEach();
+
+        List<ODataRow> updateLine = stockInventoryLine.select(null, "inventory_id = ?", new String[]{String.valueOf(stockInventoryId)});
+        Log.d(" ___ NOW __", String.valueOf(updateLine));
+
+        List ids = new ArrayList();
+        for (ODataRow row : updateLine) {
+            ids.add(row.getInt("_id"));
+        }
+        OValues values = new OValues();
+        values.put("line_ids", ids);
+        stockInventory.update(stockInventoryId, values);
+//        onSIChangeUpdate.execute(domain);
+        record = stockInventory.browse(stockInventoryId);
+        List<ODataRow> fin = record.getO2MRecord("line_ids").browseEach();
+        Log.d(" ___ FinaL __", String.valueOf(fin));
+    }
+
+
+    private void propareLineData(HashMap<String, Float>... params) {
+        recordLine.clear();
+        for (String key : params[0].keySet()) {
+            Float qty = params[0].get(key);
+            int product_row_id = productProduct.selectRowId(Float.valueOf(key).intValue());
+            OValues values = new OValues();
+            values.put("product_id", product_row_id);
+            values.put("location_id", 1);
+            values.put("theoretical_qty", 0.0);
+            values.put("product_qty", qty);
+            values.put("product_uom_id", 1);
+            recordLine.add(values.toDataRow());
         }
         drawLines(recordLine);
     }
@@ -399,9 +401,9 @@ public class AdjustmentDetails extends OdooCompatActivity
 
                         List<ODataRow> prod = productProduct.select(null, "_id = ?", new String[]{row.getString("product_id")});
                         List<ODataRow> loc = stockLocation.select(null, "_id = ?", new String[]{row.getString("location_id")});
+                        Log.d(TAG, "row : " + prod +" ||| "+ loc);
 
-                        OControls.setText(mView, R.id.edit_product,
-                                "[" + ((prod.get(0).getString("default_code") == null) ? "" : prod.get(0).getString("default_code")) + "] " + prod.get(0).getString("name"));
+                        OControls.setText(mView, R.id.edit_product, prod.get(0).getString("name"));
                         OControls.setText(mView, R.id.edit_location, loc.get(0).getString("name"));
                         OControls.setText(mView, R.id.edit_check_qty, String.format("%.2f", row.getFloat("theoretical_qty")));
                         OControls.setText(mView, R.id.edit_real_qty, String.format("%.2f", row.getFloat("product_qty")));
@@ -411,73 +413,5 @@ public class AdjustmentDetails extends OdooCompatActivity
                 });
         mAdapter.notifyDataSetChanged(objects);
     }
-
-//    private class OnProductChange extends AsyncTask<HashMap<String, Float>, Void, List<ODataRow>> {
-//        private ProgressDialog progressDialog;
-//        private String warning = null;
-//
-//        @Override
-//        protected void onPreExecute() {
-//            super.onPreExecute();
-//        }
-//
-//        @Override
-//        protected List<ODataRow> doInBackground(HashMap<String, Float>... params) {
-//
-//            List<ODataRow> items = new ArrayList<>();
-//            int inventoryId = extras.getInt(OColumn.ROW_ID);
-//            try {
-//                for (String key : params[0].keySet()) {
-//                    Float qty = params[0].get(key);
-//
-//                    int product_row_id = productProduct.selectRowId(Integer.parseInt(key));
-//                    List<ODataRow> prodUom = productUom.select();
-//
-//                    OValues values = new OValues();
-//                    values.put("inventory_id", String.valueOf(inventoryId));
-//                    values.put("product_id", String.valueOf(product_row_id));
-////  product uom id -g olj tavih dutuu !!!
-//                    values.put("location_id", String.valueOf(1));
-//                    values.put("theoretical_qty", String.valueOf(0));
-//                    values.put("product_qty", String.valueOf(qty));
-////  product uom id -g olj tavih dutuu !!!
-//                    values.put("product_uom_id", String.valueOf(1));
-//                    items.add(values.toDataRow());
-//
-//                    if (recordLine.size() > 0) {
-//                        String updateRowId = new String();
-//                        for (ODataRow rec : recordLine) {
-//                            int product_id = productProduct.selectServerId(rec.getInt("product_id"));
-//                            if (product_id == Integer.parseInt(key)) {
-//                                updateRowId = String.valueOf(rec.getString("_id"));
-//                            }
-//                        }
-//
-//                        if (updateRowId.equals("")) {
-//                            stockInventoryLine.insert(values);
-//                        } else {
-//                            stockInventoryLine.update(Integer.parseInt(updateRowId), values);
-//                        }
-//                    } else {
-//                        stockInventoryLine.insert(values);
-//                    }
-//                }
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//            return items;
-//        }
-//
-//        @Override
-//        protected void onPostExecute(List<ODataRow> row) {
-//            super.onPostExecute(row);
-//            if (!hasRecordInExtra()) {
-//                recordLine = stockInventoryLine.select(null, "inventory_id = ?", new String[]{"0"});
-//            } else {
-//                recordLine = record.getO2MRecord("line_ids").browseEach();
-//            }
-//            drawLines(recordLine);
-//        }
-//    }
 
 }
