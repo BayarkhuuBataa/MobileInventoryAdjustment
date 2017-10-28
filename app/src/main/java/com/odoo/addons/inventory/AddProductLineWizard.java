@@ -174,11 +174,8 @@ public class AddProductLineWizard extends ActionBarActivity implements
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         ODataRow data = (ODataRow) objects.get(position);
-        Log.d(" ___ DATA ___ ", String.valueOf(data));
-        Log.d(" ___ DAid ___ ", String.valueOf(data.getFloat("id").intValue()));
-        Log.d(" ___ DAid ___ ", String.valueOf(Math.round(data.getFloat("id"))));
-        int row_id = productProduct.selectRowId(data.getFloat("id").intValue());
-        Log.d(" ___ ROW .___ ", String.valueOf(row_id) +" OColumn.ROW_ID " + OColumn.ROW_ID);
+        data.put("id", data.getFloat("id").intValue());
+        int row_id = productProduct.selectRowId(data.getInt("id"));
         if (row_id != -1) {
             data.put(OColumn.ROW_ID, row_id);
         }
@@ -194,7 +191,8 @@ public class AddProductLineWizard extends ActionBarActivity implements
     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
         ODataRow data = (ODataRow) objects.get(position);
         mLongClicked = true;
-        int row_id = productProduct.selectRowId(data.getFloat("id").intValue());
+        data.put("id", data.getFloat("id").intValue());
+        int row_id = productProduct.selectRowId(data.getInt("id"));
         if (row_id != -1) {
             data.put(OColumn.ROW_ID, row_id);
         }
