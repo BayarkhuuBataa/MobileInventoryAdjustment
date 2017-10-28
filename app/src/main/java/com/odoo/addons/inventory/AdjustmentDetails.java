@@ -319,8 +319,8 @@ public class AdjustmentDetails extends OdooCompatActivity
         if (requestCode == REQUEST_ADD_ITEMS && resultCode == Activity.RESULT_OK) {
             lineValues.clear();
             for (String key : data.getExtras().keySet()) {
-//                if (data.getExtras().getFloat(key) > 0)
-                lineValues.put(key, data.getExtras().getFloat(key));
+                if (data.getExtras().getFloat(key) > 0)
+                    lineValues.put(key, data.getExtras().getFloat(key));
             }
             propareLineData(lineValues);
 
@@ -333,14 +333,14 @@ public class AdjustmentDetails extends OdooCompatActivity
         ODomain domain = new ODomain();
 
         if (!recordLine.equals(null)) {
-            String updateRowId = new String();
-            if (!existData.equals(null)) {
-                for (ODataRow rec: recordLine) {
+            for (ODataRow rec: recordLine) {
+                String updateRowId = new String();
+                OValues oValues = new OValues();
+                oValues.put("inventory_id", stockInventoryId);
+                rec.addAll(oValues.toDataRow());
+                if (!existData.isEmpty()) {
                     for (ODataRow local: existData) {
-                        OValues oValues = new OValues();
-                        oValues.put("inventory_id", stockInventoryId);
-                        rec.addAll(oValues.toDataRow());
-                        if (local.getInt("product_id") == rec.getInt("product_id")) {
+                        if (local.getInt("product_id").equals(rec.getInt("product_id"))) {
                             updateRowId = String.valueOf(local.getString("_id"));
                         }
                     }
@@ -349,10 +349,9 @@ public class AdjustmentDetails extends OdooCompatActivity
                     } else {
                         stockInventoryLine.update(Integer.parseInt(updateRowId), rec.toValues());
                     }
-
+                } else {
+                    stockInventoryLine.insert(rec.toValues());
                 }
-            } else {
-                stockInventoryLine.insert((OValues) recordLine);
             }
         }
 
