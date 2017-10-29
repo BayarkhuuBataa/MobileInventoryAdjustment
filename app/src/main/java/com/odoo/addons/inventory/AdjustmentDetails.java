@@ -277,12 +277,6 @@ public class AdjustmentDetails extends OdooCompatActivity
                     stockInventory.quickCreateRecord(r);
                 }
                 stockInventory.quickSyncRecords(domain);
-                if (!recordLine.equals("null")) {
-                    for (ODataRow row : recordLine) {
-                        stockInventoryLine.quickCreateRecord(row);
-                    }
-                    stockInventoryLine.quickSyncRecords(domain);
-                }
             }
             return null;
         }
@@ -333,44 +327,31 @@ public class AdjustmentDetails extends OdooCompatActivity
         ODomain domain = new ODomain();
 
         if (!recordLine.equals(null)) {
-            for (ODataRow rec: recordLine) {
-                String updateRowId = new String();
+            if (!existData.isEmpty()) {
+                for (ODataRow local: existData) {
+                    stockInventoryLine.delete(local.getInt("_id"));
+                }
+            }
+            for (ODataRow rec : recordLine) {
                 OValues oValues = new OValues();
                 oValues.put("inventory_id", stockInventoryId);
                 rec.addAll(oValues.toDataRow());
-                if (!existData.isEmpty()) {
-                    for (ODataRow local: existData) {
-                        if (local.getInt("product_id").equals(rec.getInt("product_id"))) {
-                            updateRowId = String.valueOf(local.getString("_id"));
-                        }
-                    }
-                    if (updateRowId.equals("")) {
-                        stockInventoryLine.insert(rec.toValues());
-                    } else {
-                        stockInventoryLine.update(Integer.parseInt(updateRowId), rec.toValues());
-                    }
-                } else {
-                    stockInventoryLine.insert(rec.toValues());
-                }
+                stockInventoryLine.insert(rec.toValues());
             }
         }
 
-        List<ODataRow> updateLine = stockInventoryLine.select(null, "inventory_id = ?", new String[]{String.valueOf(stockInventoryId)});
-        Log.d(" ___ NOW __", String.valueOf(updateLine));
+        recordLine = stockInventoryLine.select(null, "inventory_id = ?", new String[]{String.valueOf(stockInventoryId)});
 
         List ids = new ArrayList();
-        for (ODataRow row : updateLine) {
+        for (ODataRow row : recordLine) {
             ids.add(row.getInt("_id"));
         }
         OValues values = new OValues();
         values.put("line_ids", ids);
         stockInventory.update(stockInventoryId, values);
-//        onSIChangeUpdate.execute(domain);
-        record = stockInventory.browse(stockInventoryId);
-        List<ODataRow> fin = record.getO2MRecord("line_ids").browseEach();
-        Log.d(" ___ FinaL __", String.valueOf(fin));
-    }
+        onSIChangeUpdate.execute(domain);
 
+    }
 
     private void propareLineData(HashMap<String, Float>... params) {
         recordLine.clear();
@@ -380,8 +361,8 @@ public class AdjustmentDetails extends OdooCompatActivity
             OValues values = new OValues();
             values.put("product_id", product_row_id);
             values.put("location_id", 1);
-            values.put("theoretical_qty", 0.0);
-            values.put("product_qty", qty);
+            values.put("theoretical_qty", String.valueOf(1));
+            values.put("product_qty", String.valueOf(qty));
             values.put("product_uom_id", 1);
             recordLine.add(values.toDataRow());
         }
@@ -400,7 +381,6 @@ public class AdjustmentDetails extends OdooCompatActivity
 
                         List<ODataRow> prod = productProduct.select(null, "_id = ?", new String[]{row.getString("product_id")});
                         List<ODataRow> loc = stockLocation.select(null, "_id = ?", new String[]{row.getString("location_id")});
-                        Log.d(TAG, "row : " + prod +" ||| "+ loc);
 
                         OControls.setText(mView, R.id.edit_product, prod.get(0).getString("name"));
                         OControls.setText(mView, R.id.edit_location, loc.get(0).getString("name"));
