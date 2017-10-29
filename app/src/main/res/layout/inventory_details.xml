@@ -20,7 +20,6 @@
             android:orientation="vertical"
             android:gravity="center_vertical"
             android:layout_height="wrap_content">
-
             <TextView
                 android:id="@+id/edit_product"
                 android:textSize="@dimen/text_size_large"
@@ -28,7 +27,6 @@
                 android:layout_width="wrap_content"
                 android:fontFamily="@string/font_normal"
                 android:layout_height="wrap_content" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
@@ -36,23 +34,12 @@
                 android:showDividers="middle"
                 android:divider="?android:attr/dividerHorizontal"
                 android:layout_height="wrap_content">
-
                 <LinearLayout
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="@dimen/default_16dp"
                     android:layout_weight="0.01"
                     android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@string/font_condensed"
-                        android:text="Location"
-                        android:textAllCaps="true"
-                        android:textColor="@color/body_text_3"
-                        android:textSize="@dimen/text_size_small" />
-
                     <TextView
                         android:id="@+id/edit_location"
                         android:layout_width="match_parent"
@@ -60,23 +47,12 @@
                         android:textColor="@color/body_text_2"
                         android:textSize="@dimen/text_size_medium" />
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/default_16dp"
                     android:layout_weight="0.01"
                     android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@string/font_condensed"
-                        android:text="Check Qty"
-                        android:textAllCaps="true"
-                        android:textColor="@color/body_text_3"
-                        android:textSize="@dimen/text_size_small" />
-
                     <TextView
                         android:id="@+id/edit_check_qty"
                         android:layout_width="match_parent"
@@ -84,23 +60,12 @@
                         android:textColor="@color/body_text_2"
                         android:textSize="@dimen/text_size_medium" />
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/default_16dp"
                     android:layout_weight="0.00"
                     android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@string/font_condensed"
-                        android:text="Real Qty"
-                        android:textAllCaps="true"
-                        android:textColor="@color/body_text_3"
-                        android:textSize="@dimen/text_size_small" />
-
                     <TextView
                         android:id="@+id/edit_real_qty"
                         android:layout_width="match_parent"

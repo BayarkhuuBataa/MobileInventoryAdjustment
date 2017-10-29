@@ -355,13 +355,15 @@ public class AdjustmentDetails extends OdooCompatActivity
 
     private void propareLineData(HashMap<String, Float>... params) {
         recordLine.clear();
+        OValues formValue = mForm.getValues();
         for (String key : params[0].keySet()) {
             Float qty = params[0].get(key);
             int product_row_id = productProduct.selectRowId(Float.valueOf(key).intValue());
+            List<ODataRow> product = productProduct.select(null, "_id = ?", new String[]{String.valueOf(product_row_id)});
             OValues values = new OValues();
             values.put("product_id", product_row_id);
-            values.put("location_id", 1);
-            values.put("theoretical_qty", String.valueOf(1));
+            values.put("location_id", formValue.getInt("location_id"));
+            values.put("theoretical_qty", String.valueOf(0));
             values.put("product_qty", String.valueOf(qty));
             values.put("product_uom_id", 1);
             recordLine.add(values.toDataRow());

@@ -3,9 +3,6 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:gravity="center_vertical"
-    android:paddingLeft="@dimen/default_4dp"
-    android:paddingTop="@dimen/default_4dp"
-    android:paddingBottom="@dimen/default_4dp"
     android:layout_height="match_parent">
 
     <TextView
@@ -17,7 +14,6 @@
         android:gravity="center"
         android:text="52"
         android:padding="2dp"
-        android:layout_marginRight="@dimen/default_4dp"
         android:textColor="@android:color/white"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -31,7 +27,7 @@
         android:fontFamily="@string/font_normal"
         android:textColor="@color/body_text_2"
         android:gravity="center_vertical"
-        android:hint="@string/label_search_mn"
+        android:hint="@string/label_search"
         android:singleLine="true"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -46,7 +42,6 @@
         android:visibility="gone"
         android:paddingTop="@dimen/default_8dp"
         android:paddingBottom="@dimen/default_8dp"
-        android:src="@drawable/ic_action_content_remove_circle"
+        android:src="@drawable/ic_action_content_remove"
         android:tint="@color/android_red_dark" />
-
 </LinearLayout>

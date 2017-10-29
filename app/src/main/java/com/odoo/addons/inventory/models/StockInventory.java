@@ -23,9 +23,7 @@ public class StockInventory extends OModel {
 
     OColumn name = new OColumn("Name", OVarchar.class).setSize(100).setRequired();
     OColumn location_id = new OColumn("Inventoried Location", StockLocation.class, OColumn.RelationType.ManyToOne).setRequired();
-    OColumn filter = new OColumn("Filter", OSelection.class).addSelection("category", "One product category")
-                                                            .addSelection("product", "One product only")
-                                                            .addSelection("partial", "Select products manually");
+    OColumn filter = new OColumn("Filter", OSelection.class).addSelection("partial", "Select products manually");
     OColumn state = new OColumn("State", OSelection.class).addSelection("draft", "Draft")
                                                           .addSelection("confirm", "In Progress");
     OColumn exhausted = new OColumn("Include Exhausted Products", OBoolean.class);
