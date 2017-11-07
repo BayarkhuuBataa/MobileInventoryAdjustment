@@ -19,7 +19,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.odoo.R;
-import com.odoo.addons.inventory.models.ProductProduct;
+import com.odoo.addons.stock.models.ProductProduct;
 import com.odoo.core.orm.ODataRow;
 import com.odoo.core.orm.ServerDataHelper;
 import com.odoo.core.orm.fields.OColumn;

@@ -3,6 +3,9 @@ package com.odoo.addons.inventory.models;
 import android.content.Context;
 import android.net.Uri;
 
+import com.odoo.addons.stock.models.ProductCategory;
+import com.odoo.addons.stock.models.ProductProduct;
+import com.odoo.addons.stock.models.StockLocation;
 import com.odoo.base.addons.res.ResCompany;
 import com.odoo.core.orm.OModel;
 import com.odoo.core.orm.fields.OColumn;
@@ -22,8 +25,10 @@ public class StockInventory extends OModel {
     public static final String AUTHORITY = "com.odoo.addons.inventory.models.stock_inventory";
 
     OColumn name = new OColumn("Name", OVarchar.class).setSize(100).setRequired();
-    OColumn location_id = new OColumn("Inventoried Location", StockLocation.class, OColumn.RelationType.ManyToOne).setRequired();
-    OColumn filter = new OColumn("Filter", OSelection.class).addSelection("partial", "Select products manually");
+    OColumn location_id = new OColumn("Inventoried Location", StockLocation.class, OColumn.RelationType.ManyToOne)
+            .addDomain("count","=",true).setRequired();
+    OColumn filter = new OColumn("Filter", OSelection.class).addSelection("product", "One product only")
+                                                            .addSelection("partial", "Select products manually");
     OColumn state = new OColumn("State", OSelection.class).addSelection("draft", "Draft")
                                                           .addSelection("confirm", "In Progress");
     OColumn exhausted = new OColumn("Include Exhausted Products", OBoolean.class);

@@ -2,6 +2,9 @@ package com.odoo.addons.inventory.models;
 
 import android.content.Context;
 
+import com.odoo.addons.stock.models.ProductProduct;
+import com.odoo.addons.stock.models.ProductUom;
+import com.odoo.addons.stock.models.StockLocation;
 import com.odoo.core.orm.OModel;
 import com.odoo.core.orm.fields.OColumn;
 import com.odoo.core.orm.fields.types.OInteger;
