@@ -82,7 +82,10 @@ public class Adjustments extends BaseFragment
     @Override
     public List<ODrawerItem> drawerMenus(Context context) {
         List<ODrawerItem> menu = new ArrayList<>();
-        menu.add(new ODrawerItem(TAG).setTitle("Adjustments").setInstance(new Adjustments()));
+        menu.add(new ODrawerItem(TAG)
+                .setTitle("Adjustments")
+                .setIcon(R.drawable.ic_action_goods)
+                .setInstance(new Adjustments()));
         return menu;
     }
 
