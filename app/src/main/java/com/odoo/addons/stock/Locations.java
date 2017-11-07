@@ -72,7 +72,7 @@ public class Locations extends BaseFragment
     @Override
     public void onViewBind(View view, Cursor cursor, ODataRow row) {
         OControls.setText(view, android.R.id.text1, row.getString("name")
-                +" "+ String.valueOf((row.getBoolean("count") == true) ? "count location" : ""));
+                +" "+ String.valueOf((row.getBoolean("count") == true) ? "/ COUNT LOCATION" : ""));
     }
 
     @Override
