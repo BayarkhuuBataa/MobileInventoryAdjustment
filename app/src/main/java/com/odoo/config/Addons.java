@@ -21,6 +21,7 @@ package com.odoo.config;
 
 import com.odoo.addons.customers.Customers;
 import com.odoo.addons.inventory.Adjustments;
+import com.odoo.addons.stock.Locations;
 import com.odoo.core.support.addons.AddonsHelper;
 import com.odoo.core.support.addons.OAddon;
 
@@ -35,5 +36,6 @@ public class Addons extends AddonsHelper {
      * OAddon partners = new OAddon(Partners.class).withSequence(2);
      */
     OAddon customers = new OAddon(Customers.class).setDefault();
+    OAddon locations = new OAddon(Locations.class);
     OAddon adjustments = new OAddon(Adjustments.class);
 }
