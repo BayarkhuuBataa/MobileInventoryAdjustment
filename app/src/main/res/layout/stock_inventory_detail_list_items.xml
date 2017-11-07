@@ -60,15 +60,15 @@
                 app:showLabel="true"
                 app:iconResource="@drawable/ic_action_drop_down"></odoo.controls.OField>
 
-            <!--<odoo.controls.OField-->
-                <!--android:id="@+id/exhausted"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--app:fieldLabelColor="@color/theme_secondary"-->
-                <!--app:fieldName="exhausted"-->
-                <!--app:fieldTextAppearance="?android:textAppearanceMedium"-->
-                <!--app:showLabel="true"-->
-                <!--app:iconResource="@drawable/ic_action_check"></odoo.controls.OField>-->
+            <odoo.controls.OField
+                android:id="@+id/exhausted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fieldLabelColor="@color/theme_secondary"
+                app:fieldName="exhausted"
+                app:fieldTextAppearance="?android:textAppearanceMedium"
+                app:showLabel="false"
+                app:iconResource="@drawable/ic_action_check"></odoo.controls.OField>
 
             <odoo.controls.OField
                 android:id="@+id/date"
@@ -90,15 +90,15 @@
                 app:showLabel="true"
                 app:iconResource="@drawable/ic_action_company"></odoo.controls.OField>
 
-            <!--<odoo.controls.OField-->
-                <!--android:id="@+id/product"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--app:fieldLabelColor="@color/theme_secondary"-->
-                <!--app:fieldName="product_id"-->
-                <!--app:fieldTextAppearance="?android:textAppearanceMedium"-->
-                <!--app:showLabel="true"-->
-                <!--app:iconResource="@drawable/ic_action_goods"></odoo.controls.OField>-->
+            <odoo.controls.OField
+                android:id="@+id/product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fieldLabelColor="@color/theme_secondary"
+                app:fieldName="product_id"
+                app:fieldTextAppearance="?android:textAppearanceMedium"
+                app:showLabel="true"
+                app:iconResource="@drawable/ic_action_goods"></odoo.controls.OField>
 
             <!--<odoo.controls.OField-->
                 <!--android:id="@+id/category"-->
