@@ -60,7 +60,7 @@ public class LocationDetails extends OdooCompatActivity {
             menu.findItem(R.id.menu_stock_location_save).setVisible(edit);
             menu.findItem(R.id.menu_stock_location_cancel).setVisible(edit);
         }
-        form.setEditable(edit);
+//        form.setEditable(edit);
     }
 
     @Override

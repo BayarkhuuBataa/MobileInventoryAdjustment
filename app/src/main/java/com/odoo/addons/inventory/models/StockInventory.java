@@ -25,8 +25,8 @@ public class StockInventory extends OModel {
     public static final String AUTHORITY = "com.odoo.addons.inventory.models.stock_inventory";
 
     OColumn name = new OColumn("Name", OVarchar.class).setSize(100).setRequired();
-    OColumn location_id = new OColumn("Inventoried Location", StockLocation.class, OColumn.RelationType.ManyToOne)
-            .addDomain("count","=",true).setRequired();
+    OColumn location_id = new OColumn("Inventoried Location", StockLocation.class, OColumn.RelationType.ManyToOne);
+//            .addDomain("count","=",true).setRequired();
     OColumn filter = new OColumn("Filter", OSelection.class).addSelection("product", "One product only")
                                                             .addSelection("partial", "Select products manually");
     OColumn state = new OColumn("State", OSelection.class).addSelection("draft", "Draft")
