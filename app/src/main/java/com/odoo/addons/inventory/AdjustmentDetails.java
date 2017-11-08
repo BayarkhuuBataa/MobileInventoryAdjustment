@@ -273,8 +273,8 @@ public class AdjustmentDetails extends OdooCompatActivity
         protected Void doInBackground(ODomain... params) {
             if (app.inNetwork()) {
                 ODomain domain = params[0];
-                for (ODataRow r: stockInventory.select(null, "id = ?", new String[]{"0"})) {
-                    stockInventory.quickCreateRecord(r);
+                for (ODataRow row: stockInventory.select(null, "id = ?", new String[]{"0"})) {
+                    stockInventory.quickCreateRecord(row);
                 }
                 stockInventory.quickSyncRecords(domain);
             }
@@ -316,7 +316,7 @@ public class AdjustmentDetails extends OdooCompatActivity
                 if (data.getExtras().getFloat(key) > 0)
                     lineValues.put(key, data.getExtras().getFloat(key));
             }
-            propareLineData(lineValues);
+            prepareLineData(lineValues);
 
         }
     }
@@ -349,23 +349,25 @@ public class AdjustmentDetails extends OdooCompatActivity
         OValues values = new OValues();
         values.put("line_ids", ids);
         stockInventory.update(stockInventoryId, values);
+
         onSIChangeUpdate.execute(domain);
 
     }
 
-    private void propareLineData(HashMap<String, Float>... params) {
+    private void prepareLineData(HashMap<String, Float>... params) {
         recordLine.clear();
-        OValues formValue = mForm.getValues();
+        OValues oVf = mForm.getValues();
         for (String key : params[0].keySet()) {
             Float qty = params[0].get(key);
             int product_row_id = productProduct.selectRowId(Float.valueOf(key).intValue());
             List<ODataRow> product = productProduct.select(null, "_id = ?", new String[]{String.valueOf(product_row_id)});
+            ODataRow product_template = product.get(0).getM2ORecord("product_tmpl_id").browse();
             OValues values = new OValues();
             values.put("product_id", product_row_id);
-            values.put("location_id", formValue.getInt("location_id"));
-            values.put("theoretical_qty", String.valueOf(0));
-            values.put("product_qty", String.valueOf(qty));
-            values.put("product_uom_id", 1);
+            values.put("location_id", oVf.getInt("location_id")); //product_template.getInt("location_id")
+            values.put("theoretical_qty", 0.0);
+            values.put("product_qty", qty);
+            values.put("product_uom_id", product_template.getInt("uom_id"));
             recordLine.add(values.toDataRow());
         }
         drawLines(recordLine);

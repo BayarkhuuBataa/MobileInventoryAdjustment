@@ -3,7 +3,6 @@ package com.odoo.addons.inventory.services;
 import android.content.Context;
 import android.content.SyncResult;
 import android.os.Bundle;
-import android.util.Log;
 
 import com.odoo.addons.inventory.models.StockInventory;
 import com.odoo.addons.inventory.models.StockInventoryLine;
