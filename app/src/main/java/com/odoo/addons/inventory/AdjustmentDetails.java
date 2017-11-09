@@ -76,6 +76,7 @@ public class AdjustmentDetails extends OdooCompatActivity
     private ExpandableListControl.ExpandableListAdapter mAdapter;
     private List<Object> objects = new ArrayList<>();
     private StockLocation stockLocation;
+    private OField oProduct, oFilter, oLine;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -132,12 +133,12 @@ public class AdjustmentDetails extends OdooCompatActivity
                 collapsingToolbarLayout.setTitle("New");
             }
             mForm.setEditable(true);
-            layoutAddItem.setEnabled(true);
-            findViewById(R.id.layoutAddItem).setVisibility(View.VISIBLE);
+//            layoutAddItem.setEnabled(true);
+//            findViewById(R.id.layoutAddItem).setVisibility(View.VISIBLE);
         } else {
             findViewById(R.id.layoutAddItem).setVisibility(View.GONE);
-            layoutAddItem.setEnabled(false);
-            mForm.setEditable(false);
+//            layoutAddItem.setEnabled(false);
+//            mForm.setEditable(false);
         }
         setColor(color);
     }
@@ -146,6 +147,9 @@ public class AdjustmentDetails extends OdooCompatActivity
         layoutAddItem = (LinearLayout) findViewById(R.id.layoutAddItem);
         layoutAddItem.setOnClickListener(this);
         mForm = (OForm) findViewById(R.id.stockInventoryForm);
+        oFilter = (OField) findViewById(R.id.filter);
+        oProduct = (OField) findViewById(R.id.product);
+        oFilter.setOnValueChangeListener(this);
         if (!hasRecordInExtra()) {
             setMode(mEditMode);
             mForm.setEditable(mEditMode);
@@ -299,6 +303,25 @@ public class AdjustmentDetails extends OdooCompatActivity
 
     @Override
     public void onFieldValueChange(OField field, Object value) {
+        Boolean checked = false;
+
+        if (field.getFieldName().equals("filter")) {
+            if (field.getValue().equals("product")) {
+                checked = true;
+                recordLine.clear();
+                lineValues.clear();
+                drawLines(recordLine);
+            } else {
+                checked = false;
+                oProduct.setValue(false);
+            }
+        }
+
+        int view = (checked) ? View.VISIBLE : View.GONE;
+        int viewLine = (checked) ? View.GONE : View.VISIBLE;
+        findViewById(R.id.product).setVisibility(view);
+        findViewById(R.id.layoutAddItem).setVisibility(viewLine);
+        findViewById(R.id.inventory_detail_lines).setVisibility(viewLine);
     }
 
     @Override
