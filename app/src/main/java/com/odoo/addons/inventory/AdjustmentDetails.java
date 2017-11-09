@@ -361,20 +361,18 @@ public class AdjustmentDetails extends OdooCompatActivity
                 rec.addAll(oValues.toDataRow());
                 stockInventoryLine.insert(rec.toValues());
             }
-        }
+            recordLine = stockInventoryLine.select(null, "inventory_id = ?", new String[]{String.valueOf(stockInventoryId)});
 
-        recordLine = stockInventoryLine.select(null, "inventory_id = ?", new String[]{String.valueOf(stockInventoryId)});
-
-        List ids = new ArrayList();
-        for (ODataRow row : recordLine) {
-            ids.add(row.getInt("_id"));
+            List ids = new ArrayList();
+            for (ODataRow row : recordLine) {
+                ids.add(row.getInt("_id"));
+            }
+            OValues values = new OValues();
+            values.put("line_ids", ids);
+            stockInventory.update(stockInventoryId, values);
         }
-        OValues values = new OValues();
-        values.put("line_ids", ids);
-        stockInventory.update(stockInventoryId, values);
 
         onSIChangeUpdate.execute(domain);
-
     }
 
     private void prepareLineData(HashMap<String, Float>... params) {
