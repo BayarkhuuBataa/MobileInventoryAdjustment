@@ -24,6 +24,7 @@ import com.odoo.addons.inventory.models.StockInventoryLine;
 import com.odoo.addons.stock.models.ProductProduct;
 import com.odoo.addons.stock.models.ProductUom;
 import com.odoo.addons.stock.models.StockLocation;
+import com.odoo.addons.stock.models.StockQuant;
 import com.odoo.core.orm.ODataRow;
 import com.odoo.core.orm.OModel;
 import com.odoo.core.orm.OValues;
@@ -133,12 +134,8 @@ public class AdjustmentDetails extends OdooCompatActivity
                 collapsingToolbarLayout.setTitle("New");
             }
             mForm.setEditable(true);
-//            layoutAddItem.setEnabled(true);
-//            findViewById(R.id.layoutAddItem).setVisibility(View.VISIBLE);
         } else {
             findViewById(R.id.layoutAddItem).setVisibility(View.GONE);
-//            layoutAddItem.setEnabled(false);
-//            mForm.setEditable(false);
         }
         setColor(color);
     }
@@ -215,6 +212,14 @@ public class AdjustmentDetails extends OdooCompatActivity
             case R.id.menu_stock_inventory_save:
                 OValues values = mForm.getValues();
                 if (values != null) {
+
+                    if (existings()) {
+                        OAlert.showError(this, "You cannot have two inventory adjustements in state 'in Progess' " +
+                                "with the same product, same location " +
+                                "the first inventory adjustement with this product before creating another one.");
+                        break;
+                    }
+
                     int stockInventoryId;
                     if (record != null) {
                         stockInventory.update(record.getInt(OColumn.ROW_ID), values);
@@ -375,20 +380,50 @@ public class AdjustmentDetails extends OdooCompatActivity
         onSIChangeUpdate.execute(domain);
     }
 
+    private boolean existings() {
+        Boolean duplicate = false;
+
+        List<ODataRow> exist = null;
+        List<ODataRow> existLine = null;
+
+        for (ODataRow res: recordLine) {
+            String where = "";
+            String[] whereArgs = null;
+            where += " product_id = ? " +
+                     " and location_id = ? ";
+            List<String> args = new ArrayList<>();
+            args.add(res.getString("product_id"));
+            args.add(res.getString("location_id"));
+            whereArgs = args.toArray(new String[args.size()]);
+
+            existLine = stockInventoryLine.select(null, where, whereArgs);
+            if (existLine.size() > 0) {
+                for (ODataRow row : existLine) {
+                    exist = stockInventory.select(null, "id = ? and state = ?", new String[]{String.valueOf(row.getInt("inventory_id")), "confirm"});
+                    Log.d("exist", String.valueOf(exist));
+                    if (exist.size() > 0)
+                        duplicate = true;
+                }
+            }
+        }
+        return duplicate;
+    }
+
     private void prepareLineData(HashMap<String, Float>... params) {
         recordLine.clear();
         OValues oVf = mForm.getValues();
         for (String key : params[0].keySet()) {
             Float qty = params[0].get(key);
+            float available_qty = 0;
             int product_row_id = productProduct.selectRowId(Float.valueOf(key).intValue());
-            List<ODataRow> product = productProduct.select(null, "_id = ?", new String[]{String.valueOf(product_row_id)});
-            ODataRow product_template = product.get(0).getM2ORecord("product_tmpl_id").browse();
+            StockQuant stockQuant = new StockQuant(this, null);
+            List<ODataRow> quant = stockQuant.select(null, "product_id = ? and location_id = ?", new String[]{String.valueOf(product_row_id), oVf.getString("location_id")});
+            available_qty = (quant.size() > 0 && !quant.get(0).getFloat("qty").equals(null)) ? quant.get(0).getFloat("qty") : 0;
             OValues values = new OValues();
             values.put("product_id", product_row_id);
-            values.put("location_id", oVf.getInt("location_id")); //product_template.getInt("location_id")
-            values.put("theoretical_qty", 0.0);
+            values.put("location_id", oVf.getInt("location_id"));
+            values.put("theoretical_qty", available_qty);
             values.put("product_qty", qty);
-            values.put("product_uom_id", product_template.getInt("uom_id"));
             recordLine.add(values.toDataRow());
         }
         drawLines(recordLine);

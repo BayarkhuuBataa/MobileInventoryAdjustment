@@ -18,7 +18,6 @@ public class ProductProduct extends OModel {
     OColumn name = new OColumn("Name", OVarchar.class);
     OColumn default_code = new OColumn("Default code", OVarchar.class).setSize(100);
     OColumn barcode = new OColumn("Barcode", OVarchar.class).setSize(100);
-    OColumn product_tmpl_id = new OColumn("Product template", ProductTemplate.class, OColumn.RelationType.ManyToOne);
 
     public ProductProduct(Context context, OUser user) {
         super(context, "product.product", user);

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import com.odoo.addons.inventory.models.StockInventory;
 import com.odoo.addons.inventory.models.StockInventoryLine;
 import com.odoo.addons.stock.models.ProductProduct;
+import com.odoo.addons.stock.models.StockQuant;
 import com.odoo.core.orm.ODataRow;
 import com.odoo.core.rpc.helper.ODomain;
 import com.odoo.core.service.ISyncFinishListener;
@@ -57,6 +58,16 @@ public class StockInventorySyncService extends OSyncService implements ISyncFini
         ODomain domain = new ODomain();
         domain.add("id","in",ids);
         productProduct.quickSyncRecords(domain);
+
+        List<Integer> idsQty = new ArrayList<>();
+        ODomain quantDomain = new ODomain();
+        for(ODataRow row : stRows){
+            idsQty.add(row.getInt("product_id"));
+        }
+        domain.add("product_id","in",idsQty);
+        StockQuant stockQuant = new StockQuant(getApplicationContext(), user);
+        stockQuant.quickSyncRecords(quantDomain);
+
         return null;
     }
 }
