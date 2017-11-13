@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/menu_stock_inventory_start"
-        android:icon="@drawable/ic_action_play_store"
-        android:title="@string/label_edit"
-        app:showAsAction="always" />
+
     <item
         android:id="@+id/menu_stock_inventory_edit"
         android:icon="@drawable/ic_action_edit"
