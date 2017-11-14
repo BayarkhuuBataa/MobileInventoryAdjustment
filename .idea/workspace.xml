@@ -6,47 +6,16 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="  " />
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf2d3a90-84d9-4e7b-b648-c2784d92bf27" name="Default" comment="test version 1">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_25_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_25_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/cardview_v7_25_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/design_25_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_http_legacy_android_25.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_base_10_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_basement_10_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_gcm_10_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_iid_10_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_tasks_10_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_25_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_25_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_compat_25_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_core_ui_25_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_core_utils_25_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_fragment_25_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_media_compat_25_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_25_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_25_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/transition_25_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/volley_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/AdjustmentDetail.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/AdjustmentDetail.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/Adjustments.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/Adjustments.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intro-slider-lib/intro-slider-lib.iml" afterPath="$PROJECT_DIR$/intro-slider-lib/intro-slider-lib.iml" />
     </list>
     <ignored path="framework.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,7 +38,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view />
+        <projects_view>
+          <tree_state />
+        </projects_view>
       </state>
     </system>
   </component>
@@ -78,25 +49,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Customers.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/customers/Customers.java">
+      <file leaf-file-name="AdjustmentDetails.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/AdjustmentDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="79" column="76" selection-start-line="77" selection-start-column="8" selection-end-line="79" selection-end-column="76" />
+            <state relative-caret-position="16">
+              <caret line="239" column="22" selection-start-line="239" selection-start-column="22" selection-end-line="239" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7311#7312#0" expanded="true" />
-                <element signature="e#7350#7351#0" expanded="true" />
+                <element signature="method#init#0;class#AdjustmentDetails#0" expanded="false" />
+                <element signature="method#onClick#0;class#AdjustmentDetails#0" expanded="false" />
+                <element signature="method#getLineProducts#0;class#AdjustmentDetails#0" expanded="false" />
+                <element signature="class#OnStockInventoryChangeUpdate#0;class#AdjustmentDetails#0" expanded="false" />
+                <element signature="method#onCreateOptionsMenu#0;class#AdjustmentDetails#0" expanded="false" />
+                <marker date="1510491318231" expanded="false" signature="2528:2543" ph="&lt;~&gt;" />
+                <marker date="1510491318231" expanded="false" signature="2605:2622" ph="&lt;~&gt;" />
+                <marker date="1510491318231" expanded="false" signature="11333:11364" ph="&quot;Network required&quot;" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Adjustments.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/Adjustments.java">
+      <file leaf-file-name="menu_stock_inventory_detail.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_stock_inventory_detail.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="137" column="5" selection-start-line="137" selection-start-column="5" selection-end-line="137" selection-end-column="5" />
+            <state relative-caret-position="256">
+              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StockInventoryLine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/models/StockInventoryLine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,32 +94,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerDetails.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/customers/CustomerDetails.java">
+      <file leaf-file-name="StockInventorySyncService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/services/StockInventorySyncService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-59">
-              <caret line="81" column="50" selection-start-line="81" selection-start-column="50" selection-end-line="81" selection-end-column="50" />
+            <state relative-caret-position="768">
+              <caret line="64" column="49" selection-start-line="64" selection-start-column="49" selection-end-line="64" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductProduct.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/models/ProductProduct.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StockQuant.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/models/StockQuant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#setMode#0;class#CustomerDetails#0" expanded="false" />
-                <element signature="method#onOptionsItemSelected#0;class#CustomerDetails#0" expanded="false" />
-                <element signature="method#onCreateOptionsMenu#0;class#CustomerDetails#0" expanded="false" />
-                <element signature="method#onFieldValueChange#0;class#CustomerDetails#0" expanded="false" />
-                <element signature="class#BigImageLoader#0;class#CustomerDetails#0" expanded="false" />
-                <element signature="method#onSaveInstanceState#0;class#CustomerDetails#0" expanded="false" />
-                <element signature="method#onActivityResult#0;class#CustomerDetails#0" expanded="false" />
+                <element signature="e#621#622#0" expanded="true" />
+                <element signature="e#672#673#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdjustmentDetail.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/AdjustmentDetail.java">
+      <file leaf-file-name="AddProductLineWizard.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/AddProductLineWizard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="4064">
+              <caret line="338" column="40" selection-start-line="338" selection-start-column="37" selection-end-line="338" selection-end-column="40" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#onLongClicked#0;class#AddProductLineWizard#0" expanded="false" />
+                <element signature="method#onRecordCreated#0;class#AddProductLineWizard#0" expanded="false" />
+                <element signature="method#beforeTextChanged#0;class#AddProductLineWizard#0" expanded="false" />
+                <element signature="method#onTextChanged#0;class#AddProductLineWizard#0" expanded="false" />
+                <element signature="method#afterTextChanged#0;class#AddProductLineWizard#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -140,9 +149,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="resourceFile" />
-        <option value="layoutResourceFile_vertical" />
         <option value="Enum" />
+        <option value="layoutResourceFile_vertical" />
+        <option value="resourceFile" />
         <option value="Class" />
       </list>
     </option>
@@ -2827,50 +2836,62 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/customers/providers/CustomersSyncProvider.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/BaseFragments.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/StockInventory.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/InventoryAdjestment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/services/StockInventorySynchService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/xml/inventory_adjustment_sync_adapter.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/inventory_adjustment_line_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/InventoryAdjustment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/inventory_adjustment_row_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventoryAdjustments/InventoryAdjustments.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventoryAdjustments/models/StockInventoryLine.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventoryAdjustments/services/StockInventorySyncService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventoryAdjustments/providers/StockInventoryProvider.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventoryAdjustments/models/StockInventory.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/xml/stock_inventory_sync_adapter.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/config/InventoryAdjustments.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/Inventory.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/StockInventoryDetails.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/inventory_detail.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/core/support/OdooCompatActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/InventoryAdjustmentDetail.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/InventoryAdjustments.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/customer_row_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/customer_detail.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/R.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/InventoryViewPager.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/StockPagerAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/InventoryPagerAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/stock_inventory_line_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/TabStockMove.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/TabStockInventoryLine.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/stock_inventory_line_header.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/AdapterItem.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/models/AddProductLineWizard.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/invneoty_line_product_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/core/utils/IntentUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/inventory_add_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/core/service/ISyncServiceListener.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/inventory_details.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/OdooMobile.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/core/orm/OModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/models/ProductUom.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/core/orm/ODataRow.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/core/rpc/helper/utils/gson/OdooResult.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/odoo/controls/OForm.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/core/orm/OValues.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/odoo/controls/OField.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/SettingsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/providers/StockLocationProvider.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/Location.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/models/ProductCategory.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/config/Addons.java" />
+        <option value="$PROJECT_DIR$/app/build/generated/source/r/debug/com/odoo/R.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/AddProductLineWizard.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/xml/stock_location_sync_adapter.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/Adjustments.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/models/StockLocation.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/location_view.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/Locations.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/stock_inventory_detail_list_items.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/models/ProductUom.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/models/ProductTemplate.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/core/service/OSyncAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/LocationDetails.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/models/StockInventory.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/customers/CustomerDetails.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/core/rpc/Odoo.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/models/ProductProduct.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/models/StockProductionLot.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/services/StockLocationSyncService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/models/StockQuant.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/models/StockInventoryLine.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/services/StockInventorySyncService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/providers/StockInventoryProvider.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/xml/inventory_sync_adapter.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/customers/Customers.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/core/support/addons/OAddon.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/config/Addons.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/models/StockInventory.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/inventory_adjustment_detail.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/customers/CustomerDetails.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/inventory_adjustment_listview.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/Adjustments.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/AdjustmentDetail.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/AdjustmentDetails.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_stock_inventory_detail.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1845" />
+    <option name="x" value="1995" />
     <option name="y" value="24" />
     <option name="width" value="1845" />
     <option name="height" value="1056" />
@@ -2883,15 +2904,27 @@
             <id />
           </State>
           <State>
+            <id>Android</id>
+          </State>
+          <State>
             <id>Android &gt; Lint &gt; Correctness</id>
           </State>
           <State>
             <id>Android &gt; Lint &gt; Usability</id>
           </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Probable bugsJava</id>
+          </State>
+          <State>
+            <id>Verbose or redundant code constructsJava</id>
+          </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>Android</id>
+            <id>UnusedAssignment</id>
           </State>
         </selected-state>
       </profile-state>
@@ -2922,9 +2955,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2942,282 +2972,23 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="odoo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="odoo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="addons" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inventory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="odoo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="addons" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inventory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="odoo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="addons" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manifests" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scratches">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
+        <subPane />
+      </pane>
+      <pane id="PackagesPane">
         <subPane />
       </pane>
       <pane id="Scope">
         <subPane subId="Problems" />
-        <subPane subId="Android Instrumented Tests" />
-        <subPane subId="Production">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Changed Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Local Unit Tests" />
         <subPane subId="Project Files">
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Default">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Tests">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="build/generated/source/buildConfig/androidTest/debug">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="com/odoo/test">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -3232,6 +3003,25 @@
     <property name="device.picker.selection" value="Nexus_5X_API_24" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="NetworkMonitor.position" value="3" />
+    <property name="GpuMonitor.position" value="2" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/ko/workspace/mobile/PrepetualSigla/framework/app/src/main/AndroidManifest.xml" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="439" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="439" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="439" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="439" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="163" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="194" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="271" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1128" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -3243,7 +3033,19 @@
       <recent name="com.odoo.addons.inventory" />
       <recent name="com.odoo.inventory" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/menu" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/models" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.odoo.addons.stock" />
+      <recent name="com.odoo.addons.stock.services" />
+      <recent name="com.odoo.addons.stock.providers" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.odoo.addons.stock.models" />
       <recent name="com.odoo.addons.inventory.models" />
       <recent name="com.odoo.addons.inventory" />
       <recent name="com.odoo.config" />
@@ -3503,14 +3305,350 @@
       <option name="presentableId" value="Default" />
       <updated>1504251233245</updated>
     </task>
-    <task id="LOCAL-00001" summary="ahhahahaha">
-      <created>1505193010559</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
+    <task id="LOCAL-00002" summary="test version 1">
+      <created>1505215169642</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1505193010559</updated>
+      <updated>1505215169642</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00003" summary="test version 2">
+      <created>1505290169303</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1505290169303</updated>
+    </task>
+    <task id="LOCAL-00004" summary="test version 1">
+      <created>1505290187309</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1505290187309</updated>
+    </task>
+    <task id="LOCAL-00005" summary="test version 1,1">
+      <created>1505730590967</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1505730590967</updated>
+    </task>
+    <task id="LOCAL-00006" summary="test version 2&#10;">
+      <created>1506560756899</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1506560756899</updated>
+    </task>
+    <task id="LOCAL-00007" summary="test version 3">
+      <created>1506618448639</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1506618448639</updated>
+    </task>
+    <task id="LOCAL-00008" summary="test version 3">
+      <created>1506618827216</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1506618827216</updated>
+    </task>
+    <task id="LOCAL-00009" summary="test version 1&#10;sync to server">
+      <created>1507526390691</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1507526390691</updated>
+    </task>
+    <task id="LOCAL-00010" summary="test version 1 update server">
+      <created>1507539834323</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1507539834323</updated>
+    </task>
+    <task id="LOCAL-00011" summary="test version 1 update on server&#10;">
+      <created>1507540133154</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1507540133154</updated>
+    </task>
+    <task id="LOCAL-00012" summary="test version 1 server update">
+      <created>1507540704090</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1507540704090</updated>
+    </task>
+    <task id="LOCAL-00013" summary="test version 1 icons">
+      <created>1507544096832</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1507544096832</updated>
+    </task>
+    <task id="LOCAL-00014" summary="test version 1 product">
+      <created>1507606954491</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1507606954491</updated>
+    </task>
+    <task id="LOCAL-00015" summary="test version 1 category">
+      <created>1507619113099</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1507619113099</updated>
+    </task>
+    <task id="LOCAL-00016" summary="test version 1">
+      <created>1507631994849</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1507631994849</updated>
+    </task>
+    <task id="LOCAL-00017" summary="test version 1 domain zasav">
+      <created>1507788961218</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1507788961218</updated>
+    </task>
+    <task id="LOCAL-00018" summary="test version o2m">
+      <created>1507818991801</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1507818991801</updated>
+    </task>
+    <task id="LOCAL-00019" summary="test version 1">
+      <created>1507858592063</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1507858592063</updated>
+    </task>
+    <task id="LOCAL-00020" summary="test version 1">
+      <created>1507866556124</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1507866556124</updated>
+    </task>
+    <task id="LOCAL-00021" summary="test version 1">
+      <created>1507989569637</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1507989569637</updated>
+    </task>
+    <task id="LOCAL-00022" summary="add item&#10;">
+      <created>1508313368007</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1508313368007</updated>
+    </task>
+    <task id="LOCAL-00023" summary="no adapter for line">
+      <created>1508315306920</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1508315306920</updated>
+    </task>
+    <task id="LOCAL-00024" summary="server update line except create">
+      <created>1508767501291</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1508767501291</updated>
+    </task>
+    <task id="LOCAL-00025" summary="sync aldaa zasah dutuu">
+      <created>1508814384257</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1508814384257</updated>
+    </task>
+    <task id="LOCAL-00026" summary="sync done except line update">
+      <created>1508820027654</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1508820027654</updated>
+    </task>
+    <task id="LOCAL-00027" summary="sync done except delete line ! fix">
+      <created>1508830363155</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1508830363155</updated>
+    </task>
+    <task id="LOCAL-00028" summary="product name location name">
+      <created>1508836016966</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1508836016966</updated>
+    </task>
+    <task id="LOCAL-00029" summary="edit able visible">
+      <created>1508836650759</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1508836650759</updated>
+    </task>
+    <task id="LOCAL-00030" summary="test version 1">
+      <created>1508838870587</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1508838870587</updated>
+    </task>
+    <task id="LOCAL-00031" summary="search fixed excep barcode">
+      <created>1508894301462</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1508894301462</updated>
+    </task>
+    <task id="LOCAL-00032" summary="barcode scan">
+      <created>1508896897513</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1508896897513</updated>
+    </task>
+    <task id="LOCAL-00033" summary="version 3">
+      <created>1509209462703</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1509209462703</updated>
+    </task>
+    <task id="LOCAL-00034" summary="test version 1">
+      <created>1509209967661</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1509209967661</updated>
+    </task>
+    <task id="LOCAL-00035" summary="test version 1">
+      <created>1509214383237</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1509214383237</updated>
+    </task>
+    <task id="LOCAL-00036" summary="demo">
+      <created>1509247808993</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1509247808993</updated>
+    </task>
+    <task id="LOCAL-00037" summary="test version 1">
+      <created>1509281614028</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1509281614028</updated>
+    </task>
+    <task id="LOCAL-00038" summary="test version 1">
+      <created>1510043748924</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1510043748924</updated>
+    </task>
+    <task id="LOCAL-00039" summary="location add">
+      <created>1510048066968</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1510048066968</updated>
+    </task>
+    <task id="LOCAL-00040" summary="location add">
+      <created>1510048189259</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1510048189259</updated>
+    </task>
+    <task id="LOCAL-00041" summary="location add">
+      <created>1510051522405</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1510051522405</updated>
+    </task>
+    <task id="LOCAL-00042" summary="product add">
+      <created>1510051535832</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1510051535832</updated>
+    </task>
+    <task id="LOCAL-00043" summary="product add">
+      <created>1510051561948</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1510051561948</updated>
+    </task>
+    <task id="LOCAL-00044" summary="test version 1">
+      <created>1510123290424</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1510123290424</updated>
+    </task>
+    <task id="LOCAL-00045" summary="fix create duplicated inventory line">
+      <created>1510138544821</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1510138544821</updated>
+    </task>
+    <task id="LOCAL-00046" summary="test version 1">
+      <created>1510140230486</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1510140230486</updated>
+    </task>
+    <task id="LOCAL-00047" summary="fix product_id by filter">
+      <created>1510200110364</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1510200110364</updated>
+    </task>
+    <task id="LOCAL-00048" summary="only update when line got value">
+      <created>1510200475841</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1510200475841</updated>
+    </task>
+    <task id="LOCAL-00049" summary="thoeretical qty">
+      <created>1510491443506</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1510491443506</updated>
+    </task>
+    <task id="LOCAL-00050" summary="erase logo">
+      <created>1510540964079</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1510540964080</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3523,38 +3661,38 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1845" y="24" width="1845" height="1056" extended-state="6" />
+    <frame x="1995" y="24" width="1845" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.49805447" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14516129" sideWeight="0.70316845" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11075269" sideWeight="0.6103391" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5019455" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="85" y="224" width="1720" height="856" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="true" show_stripe_button="true" weight="0.37849462" sideWeight="0.84157866" order="8" side_tool="false" content_ui="tabs" x="75" y="52" width="923" height="1028" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1795442" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.49805447" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.51083934" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.37849462" sideWeight="0.84157866" order="8" side_tool="false" content_ui="tabs" x="674" y="52" width="1246" height="1028" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.48916066" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20177877" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17634408" sideWeight="0.495831" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2032258" sideWeight="0.7965536" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1389661" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962757" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2495831" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962757" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.76209" order="3" side_tool="false" content_ui="tabs" x="987" y="62" width="933" height="1058" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="311" y="889" width="555" height="191" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1795442" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.48916066" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -3569,428 +3707,486 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="test version 1 icons" />
+    <MESSAGE value="test version 1 product" />
+    <MESSAGE value="test version 1 category" />
+    <MESSAGE value="test version 1 domain zasav" />
+    <MESSAGE value="test version o2m" />
+    <MESSAGE value="add item&#10;" />
+    <MESSAGE value="no adapter for line" />
+    <MESSAGE value="server update line except create" />
+    <MESSAGE value="sync aldaa zasah dutuu" />
+    <MESSAGE value="sync done except line update" />
+    <MESSAGE value="sync done except delete line ! fix" />
+    <MESSAGE value="product name location name" />
+    <MESSAGE value="edit able visible" />
+    <MESSAGE value="search fixed excep barcode" />
+    <MESSAGE value="barcode scan" />
+    <MESSAGE value="version 3" />
+    <MESSAGE value="demo" />
+    <MESSAGE value="location add" />
+    <MESSAGE value="product add" />
+    <MESSAGE value="fix create duplicated inventory line" />
     <MESSAGE value="test version 1" />
-    <MESSAGE value="ahhahahaha" />
-    <option name="LAST_COMMIT_MESSAGE" value="ahhahahaha" />
+    <MESSAGE value="fix product_id by filter" />
+    <MESSAGE value="only update when line got value" />
+    <MESSAGE value="thoeretical qty" />
+    <MESSAGE value="erase logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="erase logo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="25" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/AddProductLineWizard.java</url>
+          <line>309</line>
+          <properties />
+          <option name="timeStamp" value="240" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/AdjustmentDetails.java</url>
+          <line>310</line>
+          <properties />
+          <option name="timeStamp" value="246" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="247" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="app">
+        <watch expression="lines.get(0)" />
+        <watch expression="lines.get(8)" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/models/StockInventory.java">
+    <entry file="file://$USER_HOME$/Android/Sdk/platforms/android-25/data/res/values/ids.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#949#950#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="300">
+          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_stock_inventory.png" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_name.png" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/inventory_adjustment_sync_adapter.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/inventory_adjustment_row_item.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/InventoryAdjustment.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/customer_sync_adapter.xml">
+    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-25/android/os/Handler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="300">
+          <caret line="642" column="0" selection-start-line="642" selection-start-column="0" selection-end-line="642" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/intro-slider-lib/src/main/AndroidManifest.xml">
+    <entry file="jar://$USER_HOME$/Android/Sdk/extras/android/m2repository/com/android/support/appcompat-v7/25.1.0/appcompat-v7-25.1.0-sources.jar!/android/support/v7/app/AppCompatActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Android/Sdk/platforms/android-25/data/res/layout/simple_list_item_1.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/config/InventoryAdjustments.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/stock_inventory_sync_adapter.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/Adjustments.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="115" column="15" selection-start-line="115" selection-start-column="15" selection-end-line="115" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-25/android/app/LoaderManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="69" column="25" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/StockInventoryDetails.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/base-strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-25/android.jar!/android/app/Activity.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/core/support/OdooCompatActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/InventoryAdjustmentDetail.java" />
-    <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-23/android.jar!/res/layout/simple_list_item_1.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="96" selection-start-line="4" selection-start-column="96" selection-end-line="4" selection-end-column="96" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_phone.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/R.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/customers/utils/ShareUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_mobile.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/core/orm/OModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="1118" column="22" selection-start-line="1118" selection-start-column="22" selection-end-line="1118" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/inventory_sync_adapter.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/OdooActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8712">
-          <caret line="558" column="0" selection-start-line="558" selection-start-column="0" selection-end-line="558" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="300">
+          <caret line="141" column="4" selection-start-line="141" selection-start-column="4" selection-end-line="143" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/providers/StockInventoryProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="82" selection-start-line="11" selection-start-column="82" selection-end-line="11" selection-end-column="82" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#386#387#0" expanded="false" />
-            <element signature="e#433#434#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/models/StockInventoryLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_partners.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/base_about.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/base_appbar.xml">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/core/utils/OFragmentUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/core/account/Profile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/core/account/About.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/SettingsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/providers/StockLocationProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/models/StockLocation.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/core/utils/drawer/DrawerUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="72" column="5" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/com/odoo/R.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="25" column="61" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_stock_location_detail.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_customer_detail.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/core/support/addons/OAddon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="124" column="52" selection-start-line="124" selection-start-column="52" selection-end-line="124" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/base/addons/res/ResPartner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="73" column="21" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-25/android/app/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="741" column="30" selection-start-line="741" selection-start-column="23" selection-end-line="741" selection-end-column="30" />
-          <folding>
-            <element signature="e#39967#39968#0" expanded="false" />
-            <element signature="e#39997#39998#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-25/android/os/Looper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-25/android/app/ActivityThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="2645" column="0" selection-start-line="2645" selection-start-column="0" selection-end-line="2645" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/customer_detail_list_items.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="121" column="24" selection-start-line="121" selection-start-column="24" selection-end-line="121" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/config/Addons.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="256">
+          <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/stock_location_sync_adapter.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/stock_inventory_sync_adapter.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="127" column="72" selection-start-line="127" selection-start-column="52" selection-end-line="127" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/models/StockInventory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#949#950#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/customer_detail.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/models/StockLocation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/customer_row_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="e#1860#1881#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/inventory_adjustment_listview.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="65" column="64" selection-start-line="65" selection-start-column="64" selection-end-line="65" selection-end-column="64" />
-          <folding>
-            <element signature="e#419#439#0" expanded="true" />
-            <element signature="e#467#487#0" expanded="true" />
-            <element signature="e#518#538#0" expanded="true" />
-            <element signature="e#568#589#0" expanded="true" />
-            <element signature="e#838#859#0" expanded="true" />
-            <element signature="e#1135#1155#0" expanded="true" />
-            <element signature="e#1631#1652#0" expanded="true" />
-            <element signature="e#1905#1926#0" expanded="true" />
-            <element signature="e#2603#2624#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/services/StockInventorySyncService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/customers/CustomerDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-59">
-          <caret line="81" column="50" selection-start-line="81" selection-start-column="50" selection-end-line="81" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setMode#0;class#CustomerDetails#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#CustomerDetails#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#CustomerDetails#0" expanded="false" />
-            <element signature="method#onFieldValueChange#0;class#CustomerDetails#0" expanded="false" />
-            <element signature="class#BigImageLoader#0;class#CustomerDetails#0" expanded="false" />
-            <element signature="method#onSaveInstanceState#0;class#CustomerDetails#0" expanded="false" />
-            <element signature="method#onActivityResult#0;class#CustomerDetails#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/inventory_adjustment_detail.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/common_listview.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/customers/Customers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="79" column="76" selection-start-line="77" selection-start-column="8" selection-end-line="79" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7311#7312#0" expanded="true" />
-            <element signature="e#7350#7351#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#860#861#0" expanded="false" />
+            <element signature="e#914#915#0" expanded="false" />
+            <element signature="e#952#953#0" expanded="false" />
+            <element signature="e#994#995#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/Adjustments.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="137" column="5" selection-start-line="137" selection-start-column="5" selection-end-line="137" selection-end-column="5" />
+        <state relative-caret-position="185">
+          <caret line="64" column="90" selection-start-line="64" selection-start-column="90" selection-end-line="64" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Android/Sdk/platforms/android-25/data/res/layout/simple_list_item_1.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/base_about.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/common_listview.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/inventory_adjustment_detail.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="92" column="35" selection-start-line="88" selection-start-column="12" selection-end-line="92" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/location_view.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="69" column="46" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/Locations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="74" column="6" selection-start-line="74" selection-start-column="6" selection-end-line="74" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/core/orm/ODataRow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/models/ProductCategory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/core/rpc/helper/utils/gson/OdooResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="56" column="36" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/core/service/OSyncAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="199" column="47" selection-start-line="199" selection-start-column="39" selection-end-line="199" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/models/ProductUom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/AdjustmentDetail.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/LocationDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="490">
+          <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/odoo/controls/OField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="515" column="0" selection-start-line="515" selection-start-column="0" selection-end-line="515" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/inventory_details.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/stock_inventory_detail.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="36" column="49" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/stock_inventory_detail_list_items.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="151" column="28" selection-start-line="151" selection-start-column="28" selection-end-line="151" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/customers/Customers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="90" column="19" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/models/ProductTemplate.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/core/rpc/Odoo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="88" column="28" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/services/StockLocationSyncService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/customers/CustomerDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="201" column="40" selection-start-line="201" selection-start-column="40" selection-end-line="201" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/core/orm/OModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="636" column="61" selection-start-line="636" selection-start-column="61" selection-end-line="636" selection-end-column="81" />
+          <folding>
+            <element signature="e#22192#22193#0" expanded="true" />
+            <element signature="e#22245#22246#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/models/StockInventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="32" column="80" selection-start-line="32" selection-start-column="73" selection-end-line="32" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/AdjustmentDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="239" column="22" selection-start-line="239" selection-start-column="22" selection-end-line="239" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#init#0;class#AdjustmentDetails#0" expanded="false" />
+            <element signature="method#onClick#0;class#AdjustmentDetails#0" expanded="false" />
+            <element signature="method#getLineProducts#0;class#AdjustmentDetails#0" expanded="false" />
+            <element signature="class#OnStockInventoryChangeUpdate#0;class#AdjustmentDetails#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#AdjustmentDetails#0" expanded="false" />
+            <marker date="1510491318231" expanded="false" signature="2528:2543" ph="&lt;~&gt;" />
+            <marker date="1510491318231" expanded="false" signature="2605:2622" ph="&lt;~&gt;" />
+            <marker date="1510491318231" expanded="false" signature="11333:11364" ph="&quot;Network required&quot;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_stock_inventory_detail.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/models/StockInventoryLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/services/StockInventorySyncService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="64" column="49" selection-start-line="64" selection-start-column="49" selection-end-line="64" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/models/ProductProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/stock/models/StockQuant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/odoo/addons/inventory/AddProductLineWizard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4064">
+          <caret line="338" column="40" selection-start-line="338" selection-start-column="37" selection-end-line="338" selection-end-column="40" />
+          <folding>
+            <element signature="method#onLongClicked#0;class#AddProductLineWizard#0" expanded="false" />
+            <element signature="method#onRecordCreated#0;class#AddProductLineWizard#0" expanded="false" />
+            <element signature="method#beforeTextChanged#0;class#AddProductLineWizard#0" expanded="false" />
+            <element signature="method#onTextChanged#0;class#AddProductLineWizard#0" expanded="false" />
+            <element signature="method#afterTextChanged#0;class#AddProductLineWizard#0" expanded="false" />
           </folding>
         </state>
       </provider>

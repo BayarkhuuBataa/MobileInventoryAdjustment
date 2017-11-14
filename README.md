@@ -62,3 +62,5 @@ GIVE FEEDBACK
  - You can also write us on **android@odoo.co.in**
 
 Follow us on Twitter: <a href="https://twitter.com/odoomobile">@odoomobile</a>
+# MobileInventoryAdjustment
+# MobileInventoryAdjustment

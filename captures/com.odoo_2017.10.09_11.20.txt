@@ -1,0 +1,3 @@
+Unknown command: com.odoo
+Bad activity command, or no activities match: com.odoo
+Use -h for help.

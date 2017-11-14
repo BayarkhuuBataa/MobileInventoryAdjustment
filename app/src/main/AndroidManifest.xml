@@ -124,9 +124,29 @@
             android:name="com.odoo.addons.inventory.AdjustmentDetails"
             android:windowSoftInputMode="adjustPan" />
 
-
         <activity
             android:name="com.odoo.addons.inventory.AddProductLineWizard"
+            android:windowSoftInputMode="adjustPan" />
+
+        <service android:name=".addons.stock.services.StockLocationSyncService"
+            android:exported="true"
+            android:process=":sync_stock_location">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/stock_location_sync_adapter" />
+        </service>
+        <provider
+            android:name="com.odoo.addons.stock.providers.StockLocationProvider"
+            android:authorities="com.odoo.addons.stock.models.stock_location"
+            android:label="Stock Location"
+            android:multiprocess="true" />
+
+        <activity
+            android:name="com.odoo.addons.stock.LocationDetails"
             android:windowSoftInputMode="adjustPan" />
 
     </application>
